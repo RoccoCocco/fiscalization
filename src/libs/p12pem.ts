@@ -2,11 +2,11 @@ import * as fs from 'fs';
 
 import * as forge from 'node-forge';
 
-export type PemResponse = CertificateResponse & {
+export type P12Result = CertificateResult & {
   pemKey: string;
 };
 
-type CertificateResponse = {
+type CertificateResult = {
   pemCertificate: string;
   serialNumber: null | string;
   attributes: {
@@ -28,13 +28,9 @@ type Attribute = {
   shortName: string;
 };
 
-export function getPemFromP12(certPath: string, password: string): PemResponse {
+export function getPemFromP12(certPath: string, password: string): P12Result {
   const p12File = fs.readFileSync(certPath, { encoding: 'binary' });
-  return convertToPem(p12File, password);
-}
-
-export function convertToPem(p12base64: string, password: string): PemResponse {
-  const p12Asn1 = forge.asn1.fromDer(p12base64);
+  const p12Asn1 = forge.asn1.fromDer(p12File);
   const p12 = forge.pkcs12.pkcs12FromAsn1(p12Asn1, false, password);
 
   const pemKey = getKeyFromP12(p12, password);
@@ -64,7 +60,7 @@ function getKeyFromP12(p12: any, password: string) {
   return pemKey;
 }
 
-function getCertificateFromP12(p12: any): CertificateResponse {
+function getCertificateFromP12(p12: any): CertificateResult {
   const certData = p12.getBags({ bagType: forge.pki.oids['certBag'] });
   const certificate = certData[forge.pki.oids['certBag'] || ''][0];
 

@@ -2,14 +2,14 @@ import axios, { AxiosResponse } from 'axios';
 import builder from 'xmlbuilder';
 import uniqid from 'uniqid';
 
-import { PemResponse, getPemFromP12 } from './libs/p12pem';
+import { P12Result, getPemFromP12 } from './libs/p12pem';
 import { Invoice } from './types/Invoice';
 import { constructX509Signature } from './utils/X509Signature';
 import { constructXmlInvoiceBody } from './utils/Body';
 import { constructXmlInvoiceHeader } from './utils/Header';
 
 export class Fiskalizacija {
-  private certificate: PemResponse;
+  private certificate: P12Result;
   private url = 'https://cis.porezna-uprava.hr:8449/FiskalizacijaService';
 
   public constructor(

@@ -1,11 +1,11 @@
 import { SignedXml } from 'xml-crypto';
 import xmlBuilder from 'xmlbuilder';
 
-import { PemResponse } from '../libs/p12pem';
+import { P12Result } from '../libs/p12pem';
 
 export const constructX509Signature = (
   xmlData: string,
-  certificate: PemResponse
+  certificate: P12Result
 ): string => {
   const signature = new SignedXml();
 
@@ -33,10 +33,10 @@ const removeCertificateTags = (certificate: string) =>
     .replace('-----END CERTIFICATE-----', '');
 
 class CustomKeyInfoProvider {
-  certificate: PemResponse;
+  certificate: P12Result;
   file: string;
 
-  constructor(certificate: PemResponse) {
+  constructor(certificate: P12Result) {
     this.certificate = certificate;
     this.file = '';
   }
