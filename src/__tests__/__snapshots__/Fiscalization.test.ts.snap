@@ -4,10 +4,10 @@ exports[`Test Main Should match 1`] = `
 "<?xml version=\\"1.0\\" encoding=\\"UTF-8\\"?>
 <soapenv:Envelope xmlns:soapenv=\\"http://schemas.xmlsoap.org/soap/envelope/\\">
   <soapenv:Body>
-    <tns:RacunZahtjev xmlns:tns=\\"http://www.apis-it.hr/fin/2012/types/f73\\" Id=\\"1l5whp3jh3kn231hul\\">
+    <tns:RacunZahtjev xmlns:tns=\\"http://www.apis-it.hr/fin/2012/types/f73\\" Id=\\"uniqid-0123456789abcdef\\">
       <tns:Zaglavlje>
-        <tns:DatumVrijeme>02.04.2021T11:44:29</tns:DatumVrijeme>
-        <tns:IdPoruke>0d285d65-f18a-4f60-ac5d-489f786fbc0c</tns:IdPoruke>
+        <tns:DatumVrijeme>01.01.2001T01:01:01</tns:DatumVrijeme>
+        <tns:IdPoruke>uuid-0123456789abcdef</tns:IdPoruke>
       </tns:Zaglavlje>
       <tns:Racun>
         <tns:BrRac>
@@ -15,7 +15,7 @@ exports[`Test Main Should match 1`] = `
           <tns:OznNapUr>1</tns:OznNapUr>
           <tns:OznPosPr>ODV1</tns:OznPosPr>
         </tns:BrRac>
-        <tns:DatVrijeme>15.07.2014T20:00:00</tns:DatVrijeme>
+        <tns:DatVrijeme>02.02.2002T02:02:02</tns:DatVrijeme>
         <tns:IznosMarza>32.00</tns:IznosMarza>
         <tns:IznosNePodlOpor>5.10</tns:IznosNePodlOpor>
         <tns:IznosOslobPdv>23.50</tns:IznosOslobPdv>
@@ -65,9 +65,9 @@ exports[`Test Main Should match 1`] = `
           </tns:Porez>
         </tns:Pnp>
         <tns:USustPdv>true</tns:USustPdv>
-        <tns:ZastKod>f066015e518c9e624abb1267f573c4f7</tns:ZastKod>
+        <tns:ZastKod>675aa29fda85f0983a661263f8a11d0f</tns:ZastKod>
       </tns:Racun>
-    <Signature xmlns=\\"http://www.w3.org/2000/09/xmldsig#\\"><SignedInfo><CanonicalizationMethod Algorithm=\\"http://www.w3.org/2001/10/xml-exc-c14n#\\"/><SignatureMethod Algorithm=\\"http://www.w3.org/2000/09/xmldsig#rsa-sha1\\"/><Reference URI=\\"#1l5whp3jh3kn231hul\\"><Transforms><Transform Algorithm=\\"http://www.w3.org/2000/09/xmldsig#enveloped-signature\\"/><Transform Algorithm=\\"http://www.w3.org/2001/10/xml-exc-c14n#\\"/></Transforms><DigestMethod Algorithm=\\"http://www.w3.org/2000/09/xmldsig#sha1\\"/><DigestValue>W/psTumD3Hi3Kne3tfyYcmpv7bw=</DigestValue></Reference></SignedInfo><SignatureValue>MOEMZZFEqdfos4hgDcx2d+moa7XUcSSEOUsosw4JmLFn9QsKCwhbTIyrOGx/pLyxyn/m59GcfzrAoiWfjKHRyI6HqiDePNzTtjTz07dNL8tHrNO7UXbW0Kclq4G8HauL4iEBCXMRm0vCq6bpRoHExspwFZfvTjBj5bqSn5jowNibpFtSbgDnji/dDaty5UhJZ8EXKhSY3gjNwAmwfEjiLrxp98/YNYLN8L0C7zPfSGyRXe1SI7LzfU+pKeLP1OEXlbV4BorcFd/uli0bkeGCqC8etygigYJ79hj/nTgt6VDdfEvrwjGZ8n9BK6aB6O10pAF4FwIVuQWmTqMPZDtRsg==</SignatureValue><KeyInfo><X509Data><X509Certificate>
+    <Signature xmlns=\\"http://www.w3.org/2000/09/xmldsig#\\"><SignedInfo><CanonicalizationMethod Algorithm=\\"http://www.w3.org/2001/10/xml-exc-c14n#\\"/><SignatureMethod Algorithm=\\"http://www.w3.org/2000/09/xmldsig#rsa-sha1\\"/><Reference URI=\\"#uniqid-0123456789abcdef\\"><Transforms><Transform Algorithm=\\"http://www.w3.org/2000/09/xmldsig#enveloped-signature\\"/><Transform Algorithm=\\"http://www.w3.org/2001/10/xml-exc-c14n#\\"/></Transforms><DigestMethod Algorithm=\\"http://www.w3.org/2000/09/xmldsig#sha1\\"/><DigestValue>fwxWywIhcaSVhWZOvjM2yJhL+SE=</DigestValue></Reference></SignedInfo><SignatureValue>pkgWhtPxfJ9CVeF+KXKkXtMqrg+oR4i0F00Vuu7S/Ae/i5jbCxEj16lo4E/ZG3zqb7vLYDQ4x39tOjW/jCkDzxlaC0uCRO7V4Rb+hOkPSNi04tbU1UgzdsA+NVVS+EhjAsIVBpV2urjCzFGPN8dUdwTxtGUjrGsDx9ULWPnhF+a9QyIr6AsVS33nYa7tgkPRE8F+yjdsjPvMD2onbRPlywM1jo2TflAeiaTD9xy+i3ZOagfPNrStdUq3hZ1GPOiL7xK+3cZpmWidxMxaiqsXFe5/U4Ao2NiLHYx4d0LsO014IciBbd0F/75K+JQa+Wj/M2PgpHf5udC7bzrBeokn+Q==</SignatureValue><KeyInfo><X509Data><X509Certificate>
 MIID9zCCAt+gAwIBAgIUGMZfw3QkXFrfXWlH1FUyknGPACYwDQYJKoZIhvcNAQEL
 BQAwgYoxCzAJBgNVBAYTAkhSMREwDwYDVQQIDAhEYWxtYXRpYTEOMAwGA1UEBwwF
 U3BsaXQxETAPBgNVBAoMCEF2YXJpdGlhMRQwEgYDVQQLDAtEZXZlbG9wbWVudDEQ

@@ -1,5 +1,3 @@
-import { Fiskalizacija } from './Fiskalizacija';
+import * as uuid from 'uuid';
 
-console.log('🚀 Init');
-
-new Fiskalizacija('../certs/certificate.pfx', 'test');
+console.log('🚀', uuid);
