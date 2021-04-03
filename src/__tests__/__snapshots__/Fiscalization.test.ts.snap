@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Main Should match 1`] = `
+"<?xml version=\\"1.0\\" encoding=\\"UTF-8\\"?>
+<soapenv:Envelope xmlns:soapenv=\\"http://schemas.xmlsoap.org/soap/envelope/\\">
+  <soapenv:Body>
+    <tns:RacunZahtjev xmlns:tns=\\"http://www.apis-it.hr/fin/2012/types/f73\\" Id=\\"1l5whp3jh3kn231hul\\">
+      <tns:Zaglavlje>
+        <tns:DatumVrijeme>02.04.2021T11:44:29</tns:DatumVrijeme>
+        <tns:IdPoruke>0d285d65-f18a-4f60-ac5d-489f786fbc0c</tns:IdPoruke>
+      </tns:Zaglavlje>
+      <tns:Racun>
+        <tns:BrRac>
+          <tns:BrOznRac>1</tns:BrOznRac>
+          <tns:OznNapUr>1</tns:OznNapUr>
+          <tns:OznPosPr>ODV1</tns:OznPosPr>
+        </tns:BrRac>
+        <tns:DatVrijeme>15.07.2014T20:00:00</tns:DatVrijeme>
+        <tns:IznosMarza>32.00</tns:IznosMarza>
+        <tns:IznosNePodlOpor>5.10</tns:IznosNePodlOpor>
+        <tns:IznosOslobPdv>23.50</tns:IznosOslobPdv>
+        <tns:IznosUkupno>456.10</tns:IznosUkupno>
+        <tns:NacinPlac>G</tns:NacinPlac>
+        <tns:NakDost>false</tns:NakDost>
+        <tns:Naknade/>
+        <tns:Oib>32314900695</tns:Oib>
+        <tns:OibOper>34562123431</tns:OibOper>
+        <tns:OstaliPor>
+          <tns:Porez>
+            <tns:Naziv>Naziv1</tns:Naziv>
+            <tns:Iznos>12.10</tns:Iznos>
+            <tns:Osnovica>453.30</tns:Osnovica>
+            <tns:Stopa>40.10</tns:Stopa>
+          </tns:Porez>
+          <tns:Porez>
+            <tns:Naziv>Naziv2</tns:Naziv>
+            <tns:Iznos>50.10</tns:Iznos>
+            <tns:Osnovica>445.10</tns:Osnovica>
+            <tns:Stopa>27.10</tns:Stopa>
+          </tns:Porez>
+        </tns:OstaliPor>
+        <tns:OznSlijed>N</tns:OznSlijed>
+        <tns:Pdv>
+          <tns:Porez>
+            <tns:Iznos>20.10</tns:Iznos>
+            <tns:Osnovica>400.10</tns:Osnovica>
+            <tns:Stopa>25.10</tns:Stopa>
+          </tns:Porez>
+          <tns:Porez>
+            <tns:Iznos>15.44</tns:Iznos>
+            <tns:Osnovica>500.10</tns:Osnovica>
+            <tns:Stopa>10.10</tns:Stopa>
+          </tns:Porez>
+        </tns:Pdv>
+        <tns:Pnp>
+          <tns:Porez>
+            <tns:Iznos>10.10</tns:Iznos>
+            <tns:Osnovica>100.10</tns:Osnovica>
+            <tns:Stopa>30.10</tns:Stopa>
+          </tns:Porez>
+          <tns:Porez>
+            <tns:Iznos>20.10</tns:Iznos>
+            <tns:Osnovica>200.10</tns:Osnovica>
+            <tns:Stopa>20.10</tns:Stopa>
+          </tns:Porez>
+        </tns:Pnp>
+        <tns:USustPdv>true</tns:USustPdv>
+        <tns:ZastKod>f066015e518c9e624abb1267f573c4f7</tns:ZastKod>
+      </tns:Racun>
+    <Signature xmlns=\\"http://www.w3.org/2000/09/xmldsig#\\"><SignedInfo><CanonicalizationMethod Algorithm=\\"http://www.w3.org/2001/10/xml-exc-c14n#\\"/><SignatureMethod Algorithm=\\"http://www.w3.org/2000/09/xmldsig#rsa-sha1\\"/><Reference URI=\\"#1l5whp3jh3kn231hul\\"><Transforms><Transform Algorithm=\\"http://www.w3.org/2000/09/xmldsig#enveloped-signature\\"/><Transform Algorithm=\\"http://www.w3.org/2001/10/xml-exc-c14n#\\"/></Transforms><DigestMethod Algorithm=\\"http://www.w3.org/2000/09/xmldsig#sha1\\"/><DigestValue>W/psTumD3Hi3Kne3tfyYcmpv7bw=</DigestValue></Reference></SignedInfo><SignatureValue>MOEMZZFEqdfos4hgDcx2d+moa7XUcSSEOUsosw4JmLFn9QsKCwhbTIyrOGx/pLyxyn/m59GcfzrAoiWfjKHRyI6HqiDePNzTtjTz07dNL8tHrNO7UXbW0Kclq4G8HauL4iEBCXMRm0vCq6bpRoHExspwFZfvTjBj5bqSn5jowNibpFtSbgDnji/dDaty5UhJZ8EXKhSY3gjNwAmwfEjiLrxp98/YNYLN8L0C7zPfSGyRXe1SI7LzfU+pKeLP1OEXlbV4BorcFd/uli0bkeGCqC8etygigYJ79hj/nTgt6VDdfEvrwjGZ8n9BK6aB6O10pAF4FwIVuQWmTqMPZDtRsg==</SignatureValue><KeyInfo><X509Data><X509Certificate>
+MIID9zCCAt+gAwIBAgIUGMZfw3QkXFrfXWlH1FUyknGPACYwDQYJKoZIhvcNAQEL
+BQAwgYoxCzAJBgNVBAYTAkhSMREwDwYDVQQIDAhEYWxtYXRpYTEOMAwGA1UEBwwF
+U3BsaXQxETAPBgNVBAoMCEF2YXJpdGlhMRQwEgYDVQQLDAtEZXZlbG9wbWVudDEQ
+MA4GA1UEAwwHQVZSVEEtUjEdMBsGCSqGSIb3DQEJARYOdGVzdEB0ZXN0LnRlc3Qw
+HhcNMjEwNDAyMTUzMDM5WhcNMzEwMzMxMTUzMDM5WjCBijELMAkGA1UEBhMCSFIx
+ETAPBgNVBAgMCERhbG1hdGlhMQ4wDAYDVQQHDAVTcGxpdDERMA8GA1UECgwIQXZh
+cml0aWExFDASBgNVBAsMC0RldmVsb3BtZW50MRAwDgYDVQQDDAdBVlJUQS1SMR0w
+GwYJKoZIhvcNAQkBFg50ZXN0QHRlc3QudGVzdDCCASIwDQYJKoZIhvcNAQEBBQAD
+ggEPADCCAQoCggEBALiLcdUNL68iNE+tl+/Y/kf2UYxlKMs9ZN4kkIB8V+xfmJZe
+zCcJrJeho79G6dP3m3Km+e0UujEO1WoJeG9WhbMV1jcDPsH0aeeLAwYxYtyS8wC3
+W+V+SlIqVPTHMw4PSQN8dSGIuGKAUfTcQNdMvd9vUOlxUqR0AxSpYBM/MA/NQsMx
+XMRxCeYXTA8O5gS7XP1MR1m01PTez49J0ztIZp/1QPghXfMzWJhQ5sKoPxl9C4n7
+GkkvtocFUduHaA31D0U6qQa+G98pnDx41okr+qLIS+JtYuGMGJ/i/0LN2wNcsDWK
+mW8Ie6epOV2jPgpVaUkc1d84qSEpKHb+u5itvekCAwEAAaNTMFEwHQYDVR0OBBYE
+FKZ8msPbaFdUkZMZHTyNNM9ufBs3MB8GA1UdIwQYMBaAFKZ8msPbaFdUkZMZHTyN
+NM9ufBs3MA8GA1UdEwEB/wQFMAMBAf8wDQYJKoZIhvcNAQELBQADggEBAKijAx46
+NMkS70wd9KxSg6AdpJWjU2aLlkB6CTEWEFtZUKFhzmUxrfSMp+oBiUYiXXlSDe7C
+fWf7ey3xwMEzSUQW9vSKYUOHVulMVilJgTd14t7yIZQi1VxvrT2MsokYNLbXNZZq
+VuO/hukbp32YwCkVqrY00Ee4Z/IWbRDQXCFKGvLwS+bx0sAG02DXTM1Mqh4CxpuV
+zI4OPVXtWdmEWwth3heV6/ln95plryhMwRN9ONmk2MAJN/A7tW5WR62Og2EBtQ2x
+nAkLnNGXeKD4LcT7AdY81hF+eZ4bP7uRWiAB2x8lp2D9rZxK9IH2P0tYeAddJ1nB
+92j956wUMwUi0wQ=
+
+</X509Certificate><X509IssuerSerial><X509IssuerName>OU=Development,O=Avaritia,C=HR</X509IssuerName><X509SerialNumber>18c65fc374245c5adf5d6947d4553292718f0026</X509SerialNumber></X509IssuerSerial></X509Data></KeyInfo></Signature></tns:RacunZahtjev>
+  </soapenv:Body>
+</soapenv:Envelope>"
+`;
