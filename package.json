@@ -48,6 +48,7 @@
     "ts-node-dev": "^1.1.6"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "dayjs": "^1.10.4",
     "md5": "^2.3.0",
     "node-forge": "^0.10.0",
