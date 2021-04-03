@@ -1,3 +1,4 @@
+import * as uuid from 'uuid';
 import builder, { XMLElement } from 'xmlbuilder';
 import dayjs from 'dayjs';
 
@@ -5,10 +6,8 @@ import { DATETIME_FORMAT } from '../constants/DatetimeFormat';
 import { XmlInvoiceHeader } from '../types/XmlInvoice';
 
 const make = (): XmlInvoiceHeader => ({
-  // IdPoruke: uuid.v4(),
-  // DatumVrijeme: dayjs().format(DATETIME_FORMAT),
-  DatumVrijeme: dayjs('2021-04-02 11:44:29').format(DATETIME_FORMAT),
-  IdPoruke: '0d285d65-f18a-4f60-ac5d-489f786fbc0c',
+  DatumVrijeme: dayjs().format(DATETIME_FORMAT),
+  IdPoruke: uuid.v4(),
 });
 
 const stringify = { name: (val: string) => `tns:${val}` };
