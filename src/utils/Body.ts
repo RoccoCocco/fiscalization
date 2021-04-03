@@ -1,7 +1,7 @@
 import builder, { XMLElement } from 'xmlbuilder';
 import dayjs from 'dayjs';
 
-import { DATETIME_FORMAT } from '../constants/DatetimeFormat';
+import { DATETIME_FORMAT } from '../constants';
 import { Invoice } from '../types/Invoice';
 import { OrderOfNotes } from '../enums/OrderOfNotes';
 import { P12Result } from '../libs/p12pem';

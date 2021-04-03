@@ -2,7 +2,7 @@ import * as uuid from 'uuid';
 import builder, { XMLElement } from 'xmlbuilder';
 import dayjs from 'dayjs';
 
-import { DATETIME_FORMAT } from '../constants/DatetimeFormat';
+import { DATETIME_FORMAT } from '../constants';
 import { XmlInvoiceHeader } from '../types/XmlInvoice';
 
 const make = (): XmlInvoiceHeader => ({
