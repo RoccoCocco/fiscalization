@@ -1,7 +1,8 @@
-import { Fiskalizacija } from './Fiskalizacija';
 import fs from 'fs';
-import { mockInvoice } from './__mocks__/Invoice';
 import xmljs from 'xml-js';
+
+import { Fiskalizacija } from './Fiskalizacija';
+import { mockInvoice } from './__mocks__/Invoice';
 
 describe('Test Main', () => {
   it('Should match', () => {

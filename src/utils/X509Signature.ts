@@ -1,6 +1,7 @@
-import { PemResponse } from '../libs/p12pem';
 import { SignedXml } from 'xml-crypto';
 import xmlBuilder from 'xmlbuilder';
+
+import { PemResponse } from '../libs/p12pem';
 
 export const constructX509Signature = (
   xmlData: string,

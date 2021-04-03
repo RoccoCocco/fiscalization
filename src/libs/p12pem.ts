@@ -1,5 +1,6 @@
-import * as forge from 'node-forge';
 import * as fs from 'fs';
+
+import * as forge from 'node-forge';
 
 export type PemResponse = CertificateResponse & {
   pemKey: string;

@@ -13,7 +13,9 @@ parserOptions:
 plugins:
   - '@typescript-eslint'
 rules:
-  sort-imports: error
+  sort-imports:
+    - error
+    - allowSeparatedGroups: true
   sort-keys: error
   indent:
     - error
