@@ -15,7 +15,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RoccoCocco/crofis.git"
+    "url": "git+https://github.com/RoccoCocco/fiscalization.git"
   },
   "keywords": [
     "oib",
@@ -26,9 +26,9 @@
   "author": "RoccoCocco",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/RoccoCocco/crofis/issues"
+    "url": "https://github.com/RoccoCocco/fiscalization/issues"
   },
-  "homepage": "https://github.com/RoccoCocco/crofis#readme",
+  "homepage": "https://github.com/RoccoCocco/fiscalization#readme",
   "devDependencies": {
     "@commitlint/cli": "^12.0.1",
     "@commitlint/config-conventional": "^12.0.1",
