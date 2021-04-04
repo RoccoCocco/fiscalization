@@ -1,13 +1,13 @@
 export type XmlTaxRate = {
-  Naziv?: string;
-  Stopa: string;
-  Osnovica: string;
   Iznos: string;
+  Naziv?: string;
+  Osnovica: string;
+  Stopa: string;
 };
 
 export type XmlRefund = {
-  NazivN: string;
   IznosN: string;
+  NazivN: string;
 };
 
 export type XmlInvoiceHeader = {
@@ -16,33 +16,33 @@ export type XmlInvoiceHeader = {
 };
 
 export type XmlInvoiceBody = {
-  Oib: string;
-  USustPdv: string;
-  DatVrijeme: string;
-  OznSlijed: string;
   BrRac: {
     BrOznRac: number;
-    OznPosPr: string;
     OznNapUr: string;
+    OznPosPr: string;
   };
+  DatVrijeme: string;
+  IznosMarza: string;
+  IznosNePodlOpor: string;
+  IznosOslobPdv: string;
+  IznosUkupno: string;
+  NacinPlac: string;
+  NakDost: string;
+  Naknade: {
+    Naknada: XmlRefund[];
+  };
+  Oib: string;
+  OibOper: string;
+  OstaliPor: {
+    Porez: XmlTaxRate[];
+  };
+  OznSlijed: string;
   Pdv: {
     Porez: XmlTaxRate[];
   };
   Pnp: {
     Porez: XmlTaxRate[];
   };
-  OstaliPor: {
-    Porez: XmlTaxRate[];
-  };
-  IznosOslobPdv: string;
-  IznosMarza: string;
-  IznosNePodlOpor: string;
-  IznosUkupno: string;
-  NacinPlac: string;
-  OibOper: string;
+  USustPdv: string;
   ZastKod: string;
-  NakDost: string;
-  Naknade: {
-    Naknada: XmlRefund[];
-  };
 };

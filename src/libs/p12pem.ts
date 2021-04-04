@@ -7,25 +7,25 @@ export type P12Result = CertificateResult & {
 };
 
 type CertificateResult = {
-  pemCertificate: string;
-  serialNumber: null | string;
   attributes: {
+    commonName: string;
     countryName: string;
-    stateOrProvinceName: string;
+    emailAddress: string;
     localityName: string;
     organizationName: string;
     organizationalUnitName: string;
-    commonName: string;
-    emailAddress: string;
+    stateOrProvinceName: string;
   };
+  pemCertificate: string;
+  serialNumber: null | string;
 };
 
 type Attribute = {
+  name: string;
+  shortName: string;
   type: string;
   value: string;
   valueTagClass: number;
-  name: string;
-  shortName: string;
 };
 
 export function getPemFromP12(certPath: string, password: string): P12Result {

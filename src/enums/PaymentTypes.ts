@@ -1,7 +1,7 @@
 export enum PaymentTypes {
-  Cash = 'G',
   Card = 'K',
+  Cash = 'G',
   Check = 'C',
-  Transfer = 'T',
   Other = 'O',
+  Transfer = 'T',
 }
