@@ -1,11 +1,12 @@
 {
-  "name": "croib",
-  "version": "1.0.0",
-  "description": "",
-  "main": "./src/index.ts",
+  "name": "@ts.fina/fiscalization",
+  "version": "0.1.0",
+  "description": "Croatian invoice fiscalization",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "prepare": "husky install",
-    "build": "tsc",
+    "build": "rm -r ./dist && tsc",
     "test": "jest",
     "test:coverage": "jest --coverage",
     "lint": "eslint . --quiet"
@@ -18,10 +19,13 @@
     "url": "git+https://github.com/RoccoCocco/fiscalization.git"
   },
   "keywords": [
-    "oib",
     "croatia",
-    "validation",
-    "generator"
+    "invoice",
+    "bill",
+    "financial",
+    "regulation",
+    "pfx",
+    "xml"
   ],
   "author": "RoccoCocco",
   "license": "MIT",

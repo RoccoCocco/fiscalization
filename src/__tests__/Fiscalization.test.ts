@@ -5,7 +5,7 @@ import axios from 'axios';
 
 import { DEMO_URL, PRODUCTION_URL } from '../constants';
 import { mockInvoice, mockInvoiceAlternate } from '../__mocks__/Invoice';
-import { Fiscalization } from '../Fiscalization';
+import { Fiscalization } from '../classes/Fiscalization';
 
 jest.mock('axios');
 jest.mock('dayjs');

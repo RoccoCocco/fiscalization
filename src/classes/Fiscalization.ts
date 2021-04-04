@@ -2,13 +2,13 @@ import axios, { AxiosResponse } from 'axios';
 import builder from 'xmlbuilder';
 import uniqid from 'uniqid';
 
-import { DEMO_URL, PRODUCTION_URL } from './constants';
-import { P12Result, getPemFromP12 } from './libs/p12pem';
-import { FiscalizationOptions } from './types/FiscalizationOptions';
-import { Invoice } from './types/Invoice';
-import { constructX509Signature } from './utils/X509Signature';
-import { constructXmlInvoiceBody } from './utils/Body';
-import { constructXmlInvoiceHeader } from './utils/Header';
+import { DEMO_URL, PRODUCTION_URL } from '../constants';
+import { P12Result, getPemFromP12 } from '../libs/p12pem';
+import { FiscalizationOptions } from '../types/FiscalizationOptions';
+import { Invoice } from '../types/Invoice';
+import { constructX509Signature } from '../utils/X509Signature';
+import { constructXmlInvoiceBody } from '../utils/Body';
+import { constructXmlInvoiceHeader } from '../utils/Header';
 
 export class Fiscalization {
   private certificate: P12Result;
