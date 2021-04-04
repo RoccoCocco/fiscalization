@@ -1,7 +1,7 @@
+import * as dayjs from 'dayjs';
+import * as uniqid from 'uniqid';
 import * as uuid from 'uuid';
 import axios from 'axios';
-import dayjs from 'dayjs';
-import uniqid from 'uniqid';
 
 import { DEMO_URL, PRODUCTION_URL } from '../constants';
 import { mockInvoice, mockInvoiceAlternate } from '../__mocks__/Invoice';
