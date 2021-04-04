@@ -1,4 +1,4 @@
-import { SignedXml } from 'xml-crypto';
+import { FileKeyInfo, SignedXml } from 'xml-crypto';
 import xmlBuilder from 'xmlbuilder';
 
 import { P12Result } from '../libs/p12pem';
@@ -32,7 +32,7 @@ const removeCertificateTags = (certificate: string) =>
     .replace('-----BEGIN CERTIFICATE-----', '')
     .replace('-----END CERTIFICATE-----', '');
 
-class CustomKeyInfoProvider {
+class CustomKeyInfoProvider implements FileKeyInfo {
   certificate: P12Result;
   file: string;
 
@@ -41,7 +41,9 @@ class CustomKeyInfoProvider {
     this.file = '';
   }
 
-  getKey = () => Buffer.from(this.file, 'utf-8');
+  getKey(): Buffer {
+    return Buffer.from('', 'utf-8');
+  }
 
   getKeyInfo(): string {
     const key = removeCertificateTags(this.certificate.pemCertificate);
