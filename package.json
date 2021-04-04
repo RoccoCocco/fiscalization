@@ -8,6 +8,7 @@
     "prepare": "husky install",
     "build": "rm -r ./dist && tsc",
     "test": "jest",
+    "format": "prettier --write ./src/",
     "test:coverage": "jest --coverage",
     "lint": "eslint . --quiet"
   },
