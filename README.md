@@ -22,8 +22,8 @@ const fiscalization = new Fiscalization(
   CERTIFICATE_PASSWORD,
   {
     demo: false,
-    demoUrl: 'https://mycustomdemo.url'
-    productionUrl: 'https://mycustomproduction.url'
+    demoUrl: 'https://mycustomdemo.url',
+    productionUrl: 'https://mycustomproduction.url',
   }
 );
 ```
