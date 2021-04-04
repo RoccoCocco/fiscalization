@@ -1,5 +1,5 @@
 export type FiscalizationOptions = {
-  demo: boolean;
+  demo?: boolean;
   productionUrl?: string;
   demoUrl?: string;
 };

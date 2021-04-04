@@ -10,7 +10,7 @@ import { constructX509Signature } from './utils/X509Signature';
 import { constructXmlInvoiceBody } from './utils/Body';
 import { constructXmlInvoiceHeader } from './utils/Header';
 
-export class Fiskalizacija {
+export class Fiscalization {
   private certificate: P12Result;
   private url;
 
@@ -21,7 +21,7 @@ export class Fiskalizacija {
   ) {
     this.url =
       options?.demo === true
-        ? options?.demoUrl || DEMO_URL
+        ? options.demoUrl || DEMO_URL
         : options?.productionUrl || PRODUCTION_URL;
 
     this.certificate = getPemFromP12(certificatePath, certificatePassword);
