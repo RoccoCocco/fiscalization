@@ -30,7 +30,26 @@ export const mockInvoice: Required<Invoice> = {
   Oib: '32314900695',
   OibOperative: '34562123431',
   PaymentType: PaymentTypes.Cash,
-  Refund: [],
+  Refund: [{ Amount: 17.8, Name: 'Refund1' }],
+  TaxFree: 5.1,
+  TaxFreeValue: 23.5,
+  TotalValue: 456.1,
+};
+
+export const mockInvoiceAlternate: Invoice = {
+  BillNumber: {
+    BussinessUnit: 'ODV1',
+    Number: 1,
+    PaymentDevice: '1',
+  },
+  DateTime: new Date('2015-07-15T18:00:00.000Z'),
+  HasPDV: false,
+  Items: {},
+  MarginForTaxRate: 32.0,
+  NoteOfRedelivary: true,
+  Oib: '32314900695',
+  OibOperative: '34562123431',
+  PaymentType: PaymentTypes.Cash,
   TaxFree: 5.1,
   TaxFreeValue: 23.5,
   TotalValue: 456.1,

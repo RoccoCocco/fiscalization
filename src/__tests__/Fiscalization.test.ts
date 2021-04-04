@@ -4,8 +4,8 @@ import dayjs from 'dayjs';
 import uniqid from 'uniqid';
 
 import { DEMO_URL, PRODUCTION_URL } from '../constants';
+import { mockInvoice, mockInvoiceAlternate } from '../__mocks__/Invoice';
 import { Fiscalization } from '../Fiscalization';
-import { mockInvoice } from '../__mocks__/Invoice';
 
 jest.mock('axios');
 jest.mock('dayjs');
@@ -80,6 +80,20 @@ describe('Test Main', () => {
 
     const fiscalization = new Fiscalization('./certs/certificate.pfx', 'test');
     const newXML = fiscalization.create(mockInvoice);
+
+    expect(newXML).toMatchSnapshot();
+  });
+
+  it('Should match with alternate data', () => {
+    _mockDayjs.format
+      .mockReturnValueOnce('01.01.2001T01:01:01')
+      .mockReturnValueOnce('02.02.2002T02:02:02');
+
+    (uniqid as any).mockReturnValueOnce('uniqid-0123456789abcdef');
+    (uuid as any).v4.mockReturnValueOnce('uuid-0123456789abcdef');
+
+    const fiscalization = new Fiscalization('./certs/certificate.pfx', 'test');
+    const newXML = fiscalization.create(mockInvoiceAlternate);
 
     expect(newXML).toMatchSnapshot();
   });
