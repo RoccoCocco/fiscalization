@@ -1,7 +1,7 @@
-import { Invoice, Refund, TaxRate } from './types/Invoice';
-import { Fiscalization } from './classes/Fiscalization';
-import { OrderOfNotes } from './enums/OrderOfNotes';
-import { PaymentTypes } from './enums/PaymentTypes';
+import { Invoice, Refund, TaxRate } from './types/invoice';
+import { Fiscalization } from './classes/fiscalization';
+import { OrderOfNotes } from './enums/orderOfNotes';
+import { PaymentTypes } from './enums/paymentTypes';
 
 export {
   Fiscalization,
