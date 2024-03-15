@@ -13,8 +13,8 @@ const TEST_CERTIFICATE_PATH = `${__dirname}/../__mocks__/cert.pfx`;
 const TEST_CERTIFICATE_PASS = 'apples';
 const TEST_CERTIFICATE_BUFFER = readFileSync(TEST_CERTIFICATE_PATH);
 
-describe('Test Main', () => {
-  it('Should match', () => {
+describe('Fiscalization', () => {
+  it('XML should match with full data', () => {
     mockFormat
       .mockReturnValueOnce('01.01.2001T01:01:01')
       .mockReturnValueOnce('02.02.2002T02:02:02');
@@ -28,7 +28,7 @@ describe('Test Main', () => {
     expect(xml).toMatchSnapshot();
   });
 
-  it('Should match with alternate data', () => {
+  it('XML should match with partial data', () => {
     mockFormat
       .mockReturnValueOnce('01.01.2001T01:01:01')
       .mockReturnValueOnce('02.02.2002T02:02:02');

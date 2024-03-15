@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Test Main Should match 1`] = `
+exports[`Fiscalization XML should match with full data 1`] = `
 "<?xml version=\\"1.0\\" encoding=\\"UTF-8\\"?>
 <soapenv:Envelope xmlns:soapenv=\\"http://schemas.xmlsoap.org/soap/envelope/\\">
   <soapenv:Body>
@@ -93,7 +93,7 @@ bHOM8gdmiyHpKCrkkvVR+YJc0x3FuzjuqJP8CkC/WdTJr3YcuLQ6K9QhPO8KIVDs
 </soapenv:Envelope>"
 `;
 
-exports[`Test Main Should match with alternate data 1`] = `
+exports[`Fiscalization XML should match with partial data 1`] = `
 "<?xml version=\\"1.0\\" encoding=\\"UTF-8\\"?>
 <soapenv:Envelope xmlns:soapenv=\\"http://schemas.xmlsoap.org/soap/envelope/\\">
   <soapenv:Body>
