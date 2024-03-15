@@ -11,7 +11,7 @@ type CertificateResult = {
     stateOrProvinceName: string;
   };
   pemCertificate: string;
-  serialNumber: null | string;
+  serialNumber: string;
 };
 
 export type P12Result = CertificateResult & {
@@ -41,8 +41,9 @@ export function getPemFromP12(
 
 function getKeyFromP12(p12: pkcs12.Pkcs12Pfx) {
   const index = pki.oids['pkcs8ShroudedKeyBag'];
+  const keyBags = pki.oids['keyBag'];
 
-  if (index === undefined) {
+  if (index === undefined || keyBags === undefined) {
     throw new Error('index not defined');
   }
 
@@ -54,11 +55,7 @@ function getKeyFromP12(p12: pkcs12.Pkcs12Pfx) {
     throw new Error('Key data is undefined');
   }
 
-  let pkcs8Key = keyData[index]?.at(0);
-
-  if (pkcs8Key === undefined) {
-    pkcs8Key = keyData?.[pki.oids['keyBag'] || '']?.at(0);
-  }
+  const pkcs8Key = keyData[index]?.at(0) ?? keyData[keyBags]?.at(0);
 
   if (!pkcs8Key?.key) {
     throw new Error('Unable to get private key.');
