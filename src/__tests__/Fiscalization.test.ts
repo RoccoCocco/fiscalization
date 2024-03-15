@@ -17,24 +17,33 @@ const _mockDayjs = {
 };
 
 (dayjs as any).mockReturnValue(_mockDayjs);
+const TEST_CERTIFICATE_PATH = `${__dirname}/../__mocks__/cert.pfx`;
+const TEST_CERTIFICATE_PASS = 'apples';
 
 describe('Test Main', () => {
-  it('Should be production base URL', () => {
-    const fiscalization = new Fiscalization('./certs/certificate.pfx', 'test');
+  it('Should be production base URL', async () => {
+    const fiscalization = new Fiscalization(
+      TEST_CERTIFICATE_PATH,
+      TEST_CERTIFICATE_PASS
+    );
 
-    const xmlData = fiscalization.create(mockInvoice);
+    const xmlData = await fiscalization.create(mockInvoice);
     fiscalization.sendXml(xmlData);
     expect(axios.post).toBeCalledWith(PRODUCTION_URL, xmlData, {
       headers: { 'Content-Type': 'text/xml' },
     });
   });
 
-  it('Should be production custom URL', () => {
-    const fiscalization = new Fiscalization('./certs/certificate.pfx', 'test', {
-      productionUrl: 'https://mycustomproduction.url',
-    });
+  it('Should be production custom URL', async () => {
+    const fiscalization = new Fiscalization(
+      TEST_CERTIFICATE_PATH,
+      TEST_CERTIFICATE_PASS,
+      {
+        productionUrl: 'https://mycustomproduction.url',
+      }
+    );
 
-    const xmlData = fiscalization.create(mockInvoice);
+    const xmlData = await fiscalization.create(mockInvoice);
     fiscalization.sendXml(xmlData);
     expect(axios.post).toBeCalledWith(
       'https://mycustomproduction.url',
@@ -45,32 +54,40 @@ describe('Test Main', () => {
     );
   });
 
-  it('Should be demo base URL', () => {
-    const fiscalization = new Fiscalization('./certs/certificate.pfx', 'test', {
-      demo: true,
-    });
+  it('Should be demo base URL', async () => {
+    const fiscalization = new Fiscalization(
+      TEST_CERTIFICATE_PATH,
+      TEST_CERTIFICATE_PASS,
+      {
+        demo: true,
+      }
+    );
 
-    const xmlData = fiscalization.create(mockInvoice);
+    const xmlData = await fiscalization.create(mockInvoice);
     fiscalization.sendXml(xmlData);
     expect(axios.post).toBeCalledWith(DEMO_URL, xmlData, {
       headers: { 'Content-Type': 'text/xml' },
     });
   });
 
-  it('Should be demo custom URL', () => {
-    const fiscalization = new Fiscalization('./certs/certificate.pfx', 'test', {
-      demo: true,
-      demoUrl: 'https://mycustomdemo.url',
-    });
+  it('Should be demo custom URL', async () => {
+    const fiscalization = new Fiscalization(
+      TEST_CERTIFICATE_PATH,
+      TEST_CERTIFICATE_PASS,
+      {
+        demo: true,
+        demoUrl: 'https://mycustomdemo.url',
+      }
+    );
 
-    const xmlData = fiscalization.create(mockInvoice);
+    const xmlData = await fiscalization.create(mockInvoice);
     fiscalization.sendXml(xmlData);
     expect(axios.post).toBeCalledWith('https://mycustomdemo.url', xmlData, {
       headers: { 'Content-Type': 'text/xml' },
     });
   });
 
-  it('Should match', () => {
+  it('Should match', async () => {
     _mockDayjs.format
       .mockReturnValueOnce('01.01.2001T01:01:01')
       .mockReturnValueOnce('02.02.2002T02:02:02');
@@ -78,13 +95,16 @@ describe('Test Main', () => {
     (uniqid as any).mockReturnValueOnce('uniqid-0123456789abcdef');
     (uuid as any).v4.mockReturnValueOnce('uuid-0123456789abcdef');
 
-    const fiscalization = new Fiscalization('./certs/certificate.pfx', 'test');
-    const newXML = fiscalization.create(mockInvoice);
+    const fiscalization = new Fiscalization(
+      TEST_CERTIFICATE_PATH,
+      TEST_CERTIFICATE_PASS
+    );
+    const newXML = await fiscalization.create(mockInvoice);
 
     expect(newXML).toMatchSnapshot();
   });
 
-  it('Should match with alternate data', () => {
+  it('Should match with alternate data', async () => {
     _mockDayjs.format
       .mockReturnValueOnce('01.01.2001T01:01:01')
       .mockReturnValueOnce('02.02.2002T02:02:02');
@@ -92,8 +112,11 @@ describe('Test Main', () => {
     (uniqid as any).mockReturnValueOnce('uniqid-0123456789abcdef');
     (uuid as any).v4.mockReturnValueOnce('uuid-0123456789abcdef');
 
-    const fiscalization = new Fiscalization('./certs/certificate.pfx', 'test');
-    const newXML = fiscalization.create(mockInvoiceAlternate);
+    const fiscalization = new Fiscalization(
+      TEST_CERTIFICATE_PATH,
+      TEST_CERTIFICATE_PASS
+    );
+    const newXML = await fiscalization.create(mockInvoiceAlternate);
 
     expect(newXML).toMatchSnapshot();
   });

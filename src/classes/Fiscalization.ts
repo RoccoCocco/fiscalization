@@ -11,7 +11,7 @@ import { constructXmlInvoiceBody } from '../utils/Body';
 import { constructXmlInvoiceHeader } from '../utils/Header';
 
 export class Fiscalization {
-  private certificate: P12Result;
+  private certificate: Promise<P12Result>;
   private url;
 
   public constructor(
@@ -27,9 +27,12 @@ export class Fiscalization {
     this.certificate = getPemFromP12(certificatePath, certificatePassword);
   }
 
-  public create(invoiceData: Invoice): string {
+  public async create(invoiceData: Invoice): Promise<string> {
     const invoiceHeader = constructXmlInvoiceHeader();
-    const invoiceBody = constructXmlInvoiceBody(this.certificate, invoiceData);
+    const invoiceBody = constructXmlInvoiceBody(
+      await this.certificate,
+      invoiceData
+    );
 
     const root = builder.create('soapenv:Envelope', { encoding: 'UTF-8' });
 
@@ -47,7 +50,10 @@ export class Fiscalization {
     request.importDocument(invoiceBody);
 
     const invoiceXml = root.end({ pretty: true });
-    const signedXml = constructX509Signature(invoiceXml, this.certificate);
+    const signedXml = constructX509Signature(
+      invoiceXml,
+      await this.certificate
+    );
 
     return signedXml;
   }

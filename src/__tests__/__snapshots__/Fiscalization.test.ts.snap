@@ -70,33 +70,25 @@ exports[`Test Main Should match 1`] = `
           </tns:Porez>
         </tns:Pnp>
         <tns:USustPdv>true</tns:USustPdv>
-        <tns:ZastKod>675aa29fda85f0983a661263f8a11d0f</tns:ZastKod>
+        <tns:ZastKod>935274bbb40a30eab1255d544b4689ce</tns:ZastKod>
       </tns:Racun>
-    <Signature xmlns=\\"http://www.w3.org/2000/09/xmldsig#\\"><SignedInfo><CanonicalizationMethod Algorithm=\\"http://www.w3.org/2001/10/xml-exc-c14n#\\"/><SignatureMethod Algorithm=\\"http://www.w3.org/2000/09/xmldsig#rsa-sha1\\"/><Reference URI=\\"#uniqid-0123456789abcdef\\"><Transforms><Transform Algorithm=\\"http://www.w3.org/2000/09/xmldsig#enveloped-signature\\"/><Transform Algorithm=\\"http://www.w3.org/2001/10/xml-exc-c14n#\\"/></Transforms><DigestMethod Algorithm=\\"http://www.w3.org/2000/09/xmldsig#sha1\\"/><DigestValue>ksnmMx6TGbKnoyZh4A+99txkEzo=</DigestValue></Reference></SignedInfo><SignatureValue>q2tXeSV7XwC0RXMu83B6LwssKWFOdehqxMrKfqIWumKug0Gw+hPtAdbCW16vvhh4Qmef1k4GqEn3B8gjlgrvhMUQHBFII5zN/TrWFKq5/Swv6fhnbGQG3Ga4xpHaBBAs5v7N5lLBOCDnwxyUntWGmJcjLMM2NFaKM6N0JjpEzWpvrg7pX9qWcOW7OEQ4XrZPl7uho7CAbGP2WzbOlOU76w+WfRKJZKnMySFpDSlDjxIBzjxACajOPhCku4T6D8le1+7bq2pgluZ4hUNrx8H5XRrfEjXBVqoGnVcSpJdPcT53f+sxkSqk1ol1ijlmR5VtQrIfyX/YnFu6HNPg+luRAg==</SignatureValue><KeyInfo><X509Data><X509Certificate>
-MIID9zCCAt+gAwIBAgIUGMZfw3QkXFrfXWlH1FUyknGPACYwDQYJKoZIhvcNAQEL
-BQAwgYoxCzAJBgNVBAYTAkhSMREwDwYDVQQIDAhEYWxtYXRpYTEOMAwGA1UEBwwF
-U3BsaXQxETAPBgNVBAoMCEF2YXJpdGlhMRQwEgYDVQQLDAtEZXZlbG9wbWVudDEQ
-MA4GA1UEAwwHQVZSVEEtUjEdMBsGCSqGSIb3DQEJARYOdGVzdEB0ZXN0LnRlc3Qw
-HhcNMjEwNDAyMTUzMDM5WhcNMzEwMzMxMTUzMDM5WjCBijELMAkGA1UEBhMCSFIx
-ETAPBgNVBAgMCERhbG1hdGlhMQ4wDAYDVQQHDAVTcGxpdDERMA8GA1UECgwIQXZh
-cml0aWExFDASBgNVBAsMC0RldmVsb3BtZW50MRAwDgYDVQQDDAdBVlJUQS1SMR0w
-GwYJKoZIhvcNAQkBFg50ZXN0QHRlc3QudGVzdDCCASIwDQYJKoZIhvcNAQEBBQAD
-ggEPADCCAQoCggEBALiLcdUNL68iNE+tl+/Y/kf2UYxlKMs9ZN4kkIB8V+xfmJZe
-zCcJrJeho79G6dP3m3Km+e0UujEO1WoJeG9WhbMV1jcDPsH0aeeLAwYxYtyS8wC3
-W+V+SlIqVPTHMw4PSQN8dSGIuGKAUfTcQNdMvd9vUOlxUqR0AxSpYBM/MA/NQsMx
-XMRxCeYXTA8O5gS7XP1MR1m01PTez49J0ztIZp/1QPghXfMzWJhQ5sKoPxl9C4n7
-GkkvtocFUduHaA31D0U6qQa+G98pnDx41okr+qLIS+JtYuGMGJ/i/0LN2wNcsDWK
-mW8Ie6epOV2jPgpVaUkc1d84qSEpKHb+u5itvekCAwEAAaNTMFEwHQYDVR0OBBYE
-FKZ8msPbaFdUkZMZHTyNNM9ufBs3MB8GA1UdIwQYMBaAFKZ8msPbaFdUkZMZHTyN
-NM9ufBs3MA8GA1UdEwEB/wQFMAMBAf8wDQYJKoZIhvcNAQELBQADggEBAKijAx46
-NMkS70wd9KxSg6AdpJWjU2aLlkB6CTEWEFtZUKFhzmUxrfSMp+oBiUYiXXlSDe7C
-fWf7ey3xwMEzSUQW9vSKYUOHVulMVilJgTd14t7yIZQi1VxvrT2MsokYNLbXNZZq
-VuO/hukbp32YwCkVqrY00Ee4Z/IWbRDQXCFKGvLwS+bx0sAG02DXTM1Mqh4CxpuV
-zI4OPVXtWdmEWwth3heV6/ln95plryhMwRN9ONmk2MAJN/A7tW5WR62Og2EBtQ2x
-nAkLnNGXeKD4LcT7AdY81hF+eZ4bP7uRWiAB2x8lp2D9rZxK9IH2P0tYeAddJ1nB
-92j956wUMwUi0wQ=
+    <Signature xmlns=\\"http://www.w3.org/2000/09/xmldsig#\\"><SignedInfo><CanonicalizationMethod Algorithm=\\"http://www.w3.org/2001/10/xml-exc-c14n#\\"/><SignatureMethod Algorithm=\\"http://www.w3.org/2000/09/xmldsig#rsa-sha1\\"/><Reference URI=\\"#uniqid-0123456789abcdef\\"><Transforms><Transform Algorithm=\\"http://www.w3.org/2000/09/xmldsig#enveloped-signature\\"/><Transform Algorithm=\\"http://www.w3.org/2001/10/xml-exc-c14n#\\"/></Transforms><DigestMethod Algorithm=\\"http://www.w3.org/2000/09/xmldsig#sha1\\"/><DigestValue>lMmoginwZSV6l3HqVq/3z4J3QJQ=</DigestValue></Reference></SignedInfo><SignatureValue>CnjFzyV6PmnB1C+4/hNETCdwxnWRoWgybC809z5k8FepE6lYjKQufTZeTvksQNI9GJkST+LCjyGLR8FBhWwrp+425qjAwm9KP6+tPHVkYDdnEI+PDceHtug4d/R8Kx0A9YQ4udg1kJHijy74g8s3fPCAfU96rI0eCnpwAJBvJLQ=</SignatureValue><KeyInfo><X509Data><X509Certificate>
+MIICczCCAdygAwIBAgIEAPymiTANBgkqhkiG9w0BAQUFADBrMQswCQYDVQQGEwJV
+UzEQMA4GA1UECBMHTG90aGlhbjESMBAGA1UEBxMJRWRpbmJ1cmdoMQ0wCwYDVQQK
+EwRUZXN0MRgwFgYJKoZIhvcNAQkBFglmcmVkQGhvbWUxDTALBgNVBAMTBGZyZWQw
+HhcNMTAwMTA4MTczNzU4WhcNMTIwMTA4MTczNzU4WjBrMQswCQYDVQQGEwJVUzEQ
+MA4GA1UECBMHTG90aGlhbjESMBAGA1UEBxMJRWRpbmJ1cmdoMQ0wCwYDVQQKEwRU
+ZXN0MRgwFgYJKoZIhvcNAQkBFglmcmVkQGhvbWUxDTALBgNVBAMTBGZyZWQwgZ8w
+DQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBALFSdWsBxphxHYTLHM1ETlhHItfK+xsj
+mcOZ9YOJHXpsONyzNyxWJZCZSK2dmwGaxqvJEsxGo/vzKvwO5K9sAT5b5xlCJmbu
+JA0XKTlLC0YTi+bNLK6db0RDoIfVfMhbW4k1Gpc/vmKWDdRAGR8phwmBQc0CqX+4
+K/Vj/CCMD8hpAgMBAAGjJDAiMCAGCWCGSAGG+EIBDAQTFhF3d3cuYWJ5bG9uc29m
+dC5kZTANBgkqhkiG9w0BAQUFAAOBgQA4YKdsSWLah3e0Ccpdzsqrjo/QxOvlEyRy
+M1n8/Dszfxik1LurcFcM8tTuyKT9aQ2EnV/id8mKx01ldzFAPkWQWU1tappOfZ/2
+bHOM8gdmiyHpKCrkkvVR+YJc0x3FuzjuqJP8CkC/WdTJr3YcuLQ6K9QhPO8KIVDs
+3BvXsf4F9Q==
 
-</X509Certificate><X509IssuerSerial><X509IssuerName>OU=Development,O=Avaritia,C=HR</X509IssuerName><X509SerialNumber>18c65fc374245c5adf5d6947d4553292718f0026</X509SerialNumber></X509IssuerSerial></X509Data></KeyInfo></Signature></tns:RacunZahtjev>
+</X509Certificate><X509IssuerSerial><X509IssuerName>OU=,O=Test,C=US</X509IssuerName><X509SerialNumber>00fca689</X509SerialNumber></X509IssuerSerial></X509Data></KeyInfo></Signature></tns:RacunZahtjev>
   </soapenv:Body>
 </soapenv:Envelope>"
 `;
@@ -131,33 +123,25 @@ exports[`Test Main Should match with alternate data 1`] = `
         <tns:Pdv/>
         <tns:Pnp/>
         <tns:USustPdv>false</tns:USustPdv>
-        <tns:ZastKod>675aa29fda85f0983a661263f8a11d0f</tns:ZastKod>
+        <tns:ZastKod>935274bbb40a30eab1255d544b4689ce</tns:ZastKod>
       </tns:Racun>
-    <Signature xmlns=\\"http://www.w3.org/2000/09/xmldsig#\\"><SignedInfo><CanonicalizationMethod Algorithm=\\"http://www.w3.org/2001/10/xml-exc-c14n#\\"/><SignatureMethod Algorithm=\\"http://www.w3.org/2000/09/xmldsig#rsa-sha1\\"/><Reference URI=\\"#uniqid-0123456789abcdef\\"><Transforms><Transform Algorithm=\\"http://www.w3.org/2000/09/xmldsig#enveloped-signature\\"/><Transform Algorithm=\\"http://www.w3.org/2001/10/xml-exc-c14n#\\"/></Transforms><DigestMethod Algorithm=\\"http://www.w3.org/2000/09/xmldsig#sha1\\"/><DigestValue>qoqwzBQgrUvj+X38sQceok+lrxY=</DigestValue></Reference></SignedInfo><SignatureValue>iEJgPmVB4cpf/2KmTc9lBaVqKfEwlSG/69VZB0b7Q8vXIa5LQsNt3PcNNz68ByQRWXhpVbdGvRCGQlalEssr0ONcD20sluDoXAf7g7aHJeA9JpO8rFa2U/yv2pQe5aVS45OC2DzOHHm+Cov4HHlb0jdNWragUsjw6Led5a60fK4BVW5N75Iyq4eKB99p2QFhhtsDidDEOL9LPT0ZhI+J+cRKOCow1P62F81sZH/049XxfeFSRmpqKu1llLSQtLIjURDKMFr8Fa+SDEkdXNMjfhoMz8uZNCOD0ETOnbQmtIFe14aacC/IkZvj1JZs1quogHsYYH7llLtyfkp7NRy1Ww==</SignatureValue><KeyInfo><X509Data><X509Certificate>
-MIID9zCCAt+gAwIBAgIUGMZfw3QkXFrfXWlH1FUyknGPACYwDQYJKoZIhvcNAQEL
-BQAwgYoxCzAJBgNVBAYTAkhSMREwDwYDVQQIDAhEYWxtYXRpYTEOMAwGA1UEBwwF
-U3BsaXQxETAPBgNVBAoMCEF2YXJpdGlhMRQwEgYDVQQLDAtEZXZlbG9wbWVudDEQ
-MA4GA1UEAwwHQVZSVEEtUjEdMBsGCSqGSIb3DQEJARYOdGVzdEB0ZXN0LnRlc3Qw
-HhcNMjEwNDAyMTUzMDM5WhcNMzEwMzMxMTUzMDM5WjCBijELMAkGA1UEBhMCSFIx
-ETAPBgNVBAgMCERhbG1hdGlhMQ4wDAYDVQQHDAVTcGxpdDERMA8GA1UECgwIQXZh
-cml0aWExFDASBgNVBAsMC0RldmVsb3BtZW50MRAwDgYDVQQDDAdBVlJUQS1SMR0w
-GwYJKoZIhvcNAQkBFg50ZXN0QHRlc3QudGVzdDCCASIwDQYJKoZIhvcNAQEBBQAD
-ggEPADCCAQoCggEBALiLcdUNL68iNE+tl+/Y/kf2UYxlKMs9ZN4kkIB8V+xfmJZe
-zCcJrJeho79G6dP3m3Km+e0UujEO1WoJeG9WhbMV1jcDPsH0aeeLAwYxYtyS8wC3
-W+V+SlIqVPTHMw4PSQN8dSGIuGKAUfTcQNdMvd9vUOlxUqR0AxSpYBM/MA/NQsMx
-XMRxCeYXTA8O5gS7XP1MR1m01PTez49J0ztIZp/1QPghXfMzWJhQ5sKoPxl9C4n7
-GkkvtocFUduHaA31D0U6qQa+G98pnDx41okr+qLIS+JtYuGMGJ/i/0LN2wNcsDWK
-mW8Ie6epOV2jPgpVaUkc1d84qSEpKHb+u5itvekCAwEAAaNTMFEwHQYDVR0OBBYE
-FKZ8msPbaFdUkZMZHTyNNM9ufBs3MB8GA1UdIwQYMBaAFKZ8msPbaFdUkZMZHTyN
-NM9ufBs3MA8GA1UdEwEB/wQFMAMBAf8wDQYJKoZIhvcNAQELBQADggEBAKijAx46
-NMkS70wd9KxSg6AdpJWjU2aLlkB6CTEWEFtZUKFhzmUxrfSMp+oBiUYiXXlSDe7C
-fWf7ey3xwMEzSUQW9vSKYUOHVulMVilJgTd14t7yIZQi1VxvrT2MsokYNLbXNZZq
-VuO/hukbp32YwCkVqrY00Ee4Z/IWbRDQXCFKGvLwS+bx0sAG02DXTM1Mqh4CxpuV
-zI4OPVXtWdmEWwth3heV6/ln95plryhMwRN9ONmk2MAJN/A7tW5WR62Og2EBtQ2x
-nAkLnNGXeKD4LcT7AdY81hF+eZ4bP7uRWiAB2x8lp2D9rZxK9IH2P0tYeAddJ1nB
-92j956wUMwUi0wQ=
+    <Signature xmlns=\\"http://www.w3.org/2000/09/xmldsig#\\"><SignedInfo><CanonicalizationMethod Algorithm=\\"http://www.w3.org/2001/10/xml-exc-c14n#\\"/><SignatureMethod Algorithm=\\"http://www.w3.org/2000/09/xmldsig#rsa-sha1\\"/><Reference URI=\\"#uniqid-0123456789abcdef\\"><Transforms><Transform Algorithm=\\"http://www.w3.org/2000/09/xmldsig#enveloped-signature\\"/><Transform Algorithm=\\"http://www.w3.org/2001/10/xml-exc-c14n#\\"/></Transforms><DigestMethod Algorithm=\\"http://www.w3.org/2000/09/xmldsig#sha1\\"/><DigestValue>kkAhzl2XzLD+p3b1+RFy6mDThiY=</DigestValue></Reference></SignedInfo><SignatureValue>PgRLrSm10lUiOICKwveo9bkAUWT97ShHlfapCd/3GnWZjjQfn6eZO7ED/pKez0/V4E9vY9gm2u5I8RjaSqt1zwl2YK91kZdk8sFWkYUco5vZuAi1v2JPqX+fdDH6wIBk8qiJiwaUOB390xwgK/+2mrBMKs2Ta2Iy986Y0MOK96k=</SignatureValue><KeyInfo><X509Data><X509Certificate>
+MIICczCCAdygAwIBAgIEAPymiTANBgkqhkiG9w0BAQUFADBrMQswCQYDVQQGEwJV
+UzEQMA4GA1UECBMHTG90aGlhbjESMBAGA1UEBxMJRWRpbmJ1cmdoMQ0wCwYDVQQK
+EwRUZXN0MRgwFgYJKoZIhvcNAQkBFglmcmVkQGhvbWUxDTALBgNVBAMTBGZyZWQw
+HhcNMTAwMTA4MTczNzU4WhcNMTIwMTA4MTczNzU4WjBrMQswCQYDVQQGEwJVUzEQ
+MA4GA1UECBMHTG90aGlhbjESMBAGA1UEBxMJRWRpbmJ1cmdoMQ0wCwYDVQQKEwRU
+ZXN0MRgwFgYJKoZIhvcNAQkBFglmcmVkQGhvbWUxDTALBgNVBAMTBGZyZWQwgZ8w
+DQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBALFSdWsBxphxHYTLHM1ETlhHItfK+xsj
+mcOZ9YOJHXpsONyzNyxWJZCZSK2dmwGaxqvJEsxGo/vzKvwO5K9sAT5b5xlCJmbu
+JA0XKTlLC0YTi+bNLK6db0RDoIfVfMhbW4k1Gpc/vmKWDdRAGR8phwmBQc0CqX+4
+K/Vj/CCMD8hpAgMBAAGjJDAiMCAGCWCGSAGG+EIBDAQTFhF3d3cuYWJ5bG9uc29m
+dC5kZTANBgkqhkiG9w0BAQUFAAOBgQA4YKdsSWLah3e0Ccpdzsqrjo/QxOvlEyRy
+M1n8/Dszfxik1LurcFcM8tTuyKT9aQ2EnV/id8mKx01ldzFAPkWQWU1tappOfZ/2
+bHOM8gdmiyHpKCrkkvVR+YJc0x3FuzjuqJP8CkC/WdTJr3YcuLQ6K9QhPO8KIVDs
+3BvXsf4F9Q==
 
-</X509Certificate><X509IssuerSerial><X509IssuerName>OU=Development,O=Avaritia,C=HR</X509IssuerName><X509SerialNumber>18c65fc374245c5adf5d6947d4553292718f0026</X509SerialNumber></X509IssuerSerial></X509Data></KeyInfo></Signature></tns:RacunZahtjev>
+</X509Certificate><X509IssuerSerial><X509IssuerName>OU=,O=Test,C=US</X509IssuerName><X509SerialNumber>00fca689</X509SerialNumber></X509IssuerSerial></X509Data></KeyInfo></Signature></tns:RacunZahtjev>
   </soapenv:Body>
 </soapenv:Envelope>"
 `;
