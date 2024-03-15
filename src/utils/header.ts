@@ -3,7 +3,7 @@ import builder, { XMLElement } from 'xmlbuilder';
 import dayjs from 'dayjs';
 
 import { DATETIME_FORMAT } from '../constants';
-import { XmlInvoiceHeader } from '../types/XmlInvoice';
+import { XmlInvoiceHeader } from '../types/xmlInvoice';
 
 const make = (): XmlInvoiceHeader => ({
   DatumVrijeme: dayjs().format(DATETIME_FORMAT),
