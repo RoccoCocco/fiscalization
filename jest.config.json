@@ -1,0 +1,11 @@
+ {
+  "clearMocks": true,
+  "coverageDirectory": "coverage",
+  "coverageProvider": "babel",
+  "moduleFileExtensions": ["js", "json", "jsx", "ts", "tsx", "node"],
+  "preset": "ts-jest",
+  "roots": ["./src"],
+  "testEnvironment": "node",
+  "testMatch": ["**/__tests__/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[tj]s?(x)"],
+  "testPathIgnorePatterns": ["/node_modules/", "dist"]
+}
