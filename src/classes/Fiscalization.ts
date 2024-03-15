@@ -1,38 +1,22 @@
-import axios, { AxiosResponse } from 'axios';
 import builder from 'xmlbuilder';
 import uniqid from 'uniqid';
 
-import { DEMO_URL, PRODUCTION_URL } from '../constants';
 import { P12Result, getPemFromP12 } from '../libs/p12pem';
-import { FiscalizationOptions } from '../types/FiscalizationOptions';
 import { Invoice } from '../types/Invoice';
 import { constructX509Signature } from '../utils/X509Signature';
 import { constructXmlInvoiceBody } from '../utils/Body';
 import { constructXmlInvoiceHeader } from '../utils/Header';
 
 export class Fiscalization {
-  private certificate: Promise<P12Result>;
-  private url;
+  private certificate: P12Result;
 
-  public constructor(
-    certificatePath: string,
-    certificatePassword: string,
-    options: FiscalizationOptions | undefined = undefined
-  ) {
-    this.url =
-      options?.demo === true
-        ? options.demoUrl || DEMO_URL
-        : options?.productionUrl || PRODUCTION_URL;
-
-    this.certificate = getPemFromP12(certificatePath, certificatePassword);
+  public constructor(certificate: Buffer, password: string) {
+    this.certificate = getPemFromP12(certificate, password);
   }
 
-  public async create(invoiceData: Invoice): Promise<string> {
+  public create(invoiceData: Invoice): string {
     const invoiceHeader = constructXmlInvoiceHeader();
-    const invoiceBody = constructXmlInvoiceBody(
-      await this.certificate,
-      invoiceData
-    );
+    const invoiceBody = constructXmlInvoiceBody(this.certificate, invoiceData);
 
     const root = builder.create('soapenv:Envelope', { encoding: 'UTF-8' });
 
@@ -50,17 +34,8 @@ export class Fiscalization {
     request.importDocument(invoiceBody);
 
     const invoiceXml = root.end({ pretty: true });
-    const signedXml = constructX509Signature(
-      invoiceXml,
-      await this.certificate
-    );
+    const signedXml = constructX509Signature(invoiceXml, this.certificate);
 
     return signedXml;
-  }
-
-  public sendXml(xmlBody: string): Promise<AxiosResponse> {
-    const config = { headers: { 'Content-Type': 'text/xml' } };
-
-    return axios.post(this.url, xmlBody, config);
   }
 }
