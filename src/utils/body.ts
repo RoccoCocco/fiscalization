@@ -6,7 +6,10 @@ import { makeRefund } from './refund';
 import { makeTaxRate } from './taxRates';
 import { toDateFormat } from './utils';
 
-export const createBody = (data: Invoice, certificate: P12Result): XmlInvoiceBody => ({
+export const createBody = (
+  data: Invoice,
+  certificate: P12Result
+): XmlInvoiceBody => ({
   BrRac: {
     BrOznRac: data.billNumber.number,
     OznNapUr: data.billNumber.paymentDevice,
@@ -29,4 +32,3 @@ export const createBody = (data: Invoice, certificate: P12Result): XmlInvoiceBod
   USustPdv: data.hasPDV ? 'true' : 'false',
   ZastKod: createSecurityCode(certificate.pemKey, data),
 });
-
