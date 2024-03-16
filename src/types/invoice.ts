@@ -2,10 +2,10 @@ import { OrderOfNotes } from '../enums/orderOfNotes';
 import { PaymentTypes } from '../enums/paymentTypes';
 
 export type TaxRate = {
-  Iznos: number;
-  Naziv?: string;
-  Osnovica: number;
-  Stopa: number;
+  Amount: number;
+  Base: number;
+  Name?: string;
+  Rate: number;
 };
 
 export type Refund = {
