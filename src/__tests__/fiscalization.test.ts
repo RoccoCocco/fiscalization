@@ -11,7 +11,7 @@ const TEST_CERTIFICATE_PASS = 'apples';
 const TEST_CERTIFICATE_BUFFER = readFileSync(TEST_CERTIFICATE_PATH);
 
 jest.useFakeTimers();
-jest.setSystemTime(new Date('2021-01-12T13:05:30.000'));
+jest.setSystemTime(new Date('2021-01-12T13:05:30'));
 
 describe('Fiscalization', () => {
   let fiscalization: Fiscalization;

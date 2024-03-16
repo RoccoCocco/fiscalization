@@ -15,7 +15,7 @@ exports[`Fiscalization XML should match with full data 1`] = `
           <tns:OznNapUr>1</tns:OznNapUr>
           <tns:OznPosPr>ODV1</tns:OznPosPr>
         </tns:BrRac>
-        <tns:DatVrijeme>15.07.2014T20:00:00</tns:DatVrijeme>
+        <tns:DatVrijeme>15.07.2014T18:00:00</tns:DatVrijeme>
         <tns:IznosMarza>32.00</tns:IznosMarza>
         <tns:IznosNePodlOpor>5.10</tns:IznosNePodlOpor>
         <tns:IznosOslobPdv>23.50</tns:IznosOslobPdv>
@@ -70,9 +70,9 @@ exports[`Fiscalization XML should match with full data 1`] = `
           </tns:Porez>
         </tns:Pnp>
         <tns:USustPdv>true</tns:USustPdv>
-        <tns:ZastKod>23c893f445155cdbc23aafd16ae06662</tns:ZastKod>
+        <tns:ZastKod>2d4398c29f18c1c2fdc3b80b0c166e2e</tns:ZastKod>
       </tns:Racun>
-    <Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/><Reference URI="#uniqid-0123456789abcdef"><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><DigestValue>VnqTZ76B8cpF1/uoMUrAA8T3CuA=</DigestValue></Reference></SignedInfo><SignatureValue>CqmmtYkJGY939NBYY51ihZysaVUN8ZT9ffgTLTVm1S3f35YQo2ddN70HiHRLdPQkiLIEwr0CCVOku1VEEQuvnS+qEWtlQ3iUzBmnVFxg9BEPP8uNAuSoMDZK5llU2KZk4eUc/0xobK/qwA5Z6ywXYrIgemPp2T/L6QuZGgE8cRc=</SignatureValue><KeyInfo><X509Data><X509Certificate>
+    <Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/><Reference URI="#uniqid-0123456789abcdef"><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><DigestValue>Q1Y0SgKoTQtZnJOz/+pZm01fKWo=</DigestValue></Reference></SignedInfo><SignatureValue>PIOjJYHm2y6gGvOplnK+N7U6fevwFJ7GSePubGzE9lvjqoVMCn3Wm0p370zDzfGDdpm2b2r5w88VNiDmte0z8hcyIBR5gIAvtkxazk8UthegbZ1T0AJKCXrbGtwwLvT6OTtc/Q7qIlRQEKIExYuu5YQS5PldhKEtnsIXyfYkXyk=</SignatureValue><KeyInfo><X509Data><X509Certificate>
 MIICczCCAdygAwIBAgIEAPymiTANBgkqhkiG9w0BAQUFADBrMQswCQYDVQQGEwJV
 UzEQMA4GA1UECBMHTG90aGlhbjESMBAGA1UEBxMJRWRpbmJ1cmdoMQ0wCwYDVQQK
 EwRUZXN0MRgwFgYJKoZIhvcNAQkBFglmcmVkQGhvbWUxDTALBgNVBAMTBGZyZWQw

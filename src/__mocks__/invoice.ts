@@ -8,7 +8,7 @@ export const mockInvoice: Required<Invoice> = {
     number: 1,
     paymentDevice: '1',
   },
-  dateTime: new Date('2014-07-15T18:00:00.000Z'),
+  dateTime: new Date('2014-07-15T18:00:00'),
   hasPDV: true,
   items: {
     otherTaxRate: [
