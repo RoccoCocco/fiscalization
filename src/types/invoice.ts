@@ -2,38 +2,38 @@ import { OrderOfNotes } from '../enums/orderOfNotes';
 import { PaymentTypes } from '../enums/paymentTypes';
 
 export type TaxRate = {
-  Amount: number;
-  Base: number;
-  Name?: string;
-  Rate: number;
+  amount: number;
+  base: number;
+  name?: string;
+  rate: number;
 };
 
 export type Refund = {
-  Amount: number;
-  Name: string;
+  amount: number;
+  name: string;
 };
 
 export type Invoice = {
-  BillNumber: {
-    BussinessUnit: string;
-    Number: number;
-    PaymentDevice: string;
+  billNumber: {
+    bussinessUnit: string;
+    number: number;
+    paymentDevice: string;
   };
-  DateTime: Date;
-  HasPDV: boolean;
-  Items: {
-    OtherTaxRate?: TaxRate[];
-    Pdv?: TaxRate[];
-    Pnp?: TaxRate[];
+  dateTime: Date;
+  hasPDV: boolean;
+  items: {
+    otherTaxRate?: TaxRate[];
+    pdv?: TaxRate[];
+    pnp?: TaxRate[];
   };
-  MarginForTaxRate: number;
-  NoteOfOrder?: OrderOfNotes;
-  NoteOfRedelivary?: boolean;
-  Oib: string;
-  OibOperative: string;
-  PaymentType: PaymentTypes;
-  Refund?: Refund[];
-  TaxFree: number;
-  TaxFreeValue: number;
-  TotalValue: number;
+  marginForTaxRate: number;
+  noteOfOrder?: OrderOfNotes;
+  noteOfRedelivary?: boolean;
+  oib: string;
+  oibOperative: string;
+  paymentType: PaymentTypes;
+  refund?: Refund[];
+  taxFree: number;
+  taxFreeValue: number;
+  totalValue: number;
 };

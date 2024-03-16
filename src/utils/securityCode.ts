@@ -10,12 +10,12 @@ export const createSecurityCode = (
 ): string => {
   const code = [
     privateKey,
-    data.Oib,
-    dayjs(data.DateTime).format(DATETIME_FORMAT),
-    data.BillNumber.Number,
-    data.BillNumber.BussinessUnit,
-    data.BillNumber.PaymentDevice,
-    data.TotalValue.toString(),
+    data.oib,
+    dayjs(data.dateTime).format(DATETIME_FORMAT),
+    data.billNumber.number,
+    data.billNumber.bussinessUnit,
+    data.billNumber.paymentDevice,
+    data.totalValue.toString(),
   ];
 
   return md5(code.join(''));
