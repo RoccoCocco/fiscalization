@@ -2,10 +2,12 @@ import builder from 'xmlbuilder';
 import uniqid from 'uniqid';
 
 import { P12Result, getPemFromP12 } from '../libs/p12pem';
+import {
+  constructX509Signature,
+  constructXmlInvoiceBody,
+  constructXmlInvoiceHeader,
+} from '../utils';
 import { Invoice } from '../types/invoice';
-import { constructX509Signature } from '../utils/x509Signature';
-import { constructXmlInvoiceBody } from '../utils/body';
-import { constructXmlInvoiceHeader } from '../utils/header';
 
 export class Fiscalization {
   private certificate: P12Result;

@@ -6,7 +6,7 @@ exports[`Fiscalization XML should match with full data 1`] = `
   <soapenv:Body>
     <tns:RacunZahtjev xmlns:tns=\\"http://www.apis-it.hr/fin/2012/types/f73\\" Id=\\"uniqid-0123456789abcdef\\">
       <tns:Zaglavlje>
-        <tns:DatumVrijeme>01.01.2001T01:01:01</tns:DatumVrijeme>
+        <tns:DatumVrijeme>12.01.2021T13:05:30</tns:DatumVrijeme>
         <tns:IdPoruke>uuid-0123456789abcdef</tns:IdPoruke>
       </tns:Zaglavlje>
       <tns:Racun>
@@ -15,7 +15,7 @@ exports[`Fiscalization XML should match with full data 1`] = `
           <tns:OznNapUr>1</tns:OznNapUr>
           <tns:OznPosPr>ODV1</tns:OznPosPr>
         </tns:BrRac>
-        <tns:DatVrijeme>02.02.2002T02:02:02</tns:DatVrijeme>
+        <tns:DatVrijeme>15.07.2014T20:00:00</tns:DatVrijeme>
         <tns:IznosMarza>32.00</tns:IznosMarza>
         <tns:IznosNePodlOpor>5.10</tns:IznosNePodlOpor>
         <tns:IznosOslobPdv>23.50</tns:IznosOslobPdv>
@@ -70,9 +70,9 @@ exports[`Fiscalization XML should match with full data 1`] = `
           </tns:Porez>
         </tns:Pnp>
         <tns:USustPdv>true</tns:USustPdv>
-        <tns:ZastKod>935274bbb40a30eab1255d544b4689ce</tns:ZastKod>
+        <tns:ZastKod>23c893f445155cdbc23aafd16ae06662</tns:ZastKod>
       </tns:Racun>
-    <Signature xmlns=\\"http://www.w3.org/2000/09/xmldsig#\\"><SignedInfo><CanonicalizationMethod Algorithm=\\"http://www.w3.org/2001/10/xml-exc-c14n#\\"/><SignatureMethod Algorithm=\\"http://www.w3.org/2000/09/xmldsig#rsa-sha1\\"/><Reference URI=\\"#uniqid-0123456789abcdef\\"><Transforms><Transform Algorithm=\\"http://www.w3.org/2000/09/xmldsig#enveloped-signature\\"/><Transform Algorithm=\\"http://www.w3.org/2001/10/xml-exc-c14n#\\"/></Transforms><DigestMethod Algorithm=\\"http://www.w3.org/2000/09/xmldsig#sha1\\"/><DigestValue>lMmoginwZSV6l3HqVq/3z4J3QJQ=</DigestValue></Reference></SignedInfo><SignatureValue>CnjFzyV6PmnB1C+4/hNETCdwxnWRoWgybC809z5k8FepE6lYjKQufTZeTvksQNI9GJkST+LCjyGLR8FBhWwrp+425qjAwm9KP6+tPHVkYDdnEI+PDceHtug4d/R8Kx0A9YQ4udg1kJHijy74g8s3fPCAfU96rI0eCnpwAJBvJLQ=</SignatureValue><KeyInfo><X509Data><X509Certificate>
+    <Signature xmlns=\\"http://www.w3.org/2000/09/xmldsig#\\"><SignedInfo><CanonicalizationMethod Algorithm=\\"http://www.w3.org/2001/10/xml-exc-c14n#\\"/><SignatureMethod Algorithm=\\"http://www.w3.org/2000/09/xmldsig#rsa-sha1\\"/><Reference URI=\\"#uniqid-0123456789abcdef\\"><Transforms><Transform Algorithm=\\"http://www.w3.org/2000/09/xmldsig#enveloped-signature\\"/><Transform Algorithm=\\"http://www.w3.org/2001/10/xml-exc-c14n#\\"/></Transforms><DigestMethod Algorithm=\\"http://www.w3.org/2000/09/xmldsig#sha1\\"/><DigestValue>VnqTZ76B8cpF1/uoMUrAA8T3CuA=</DigestValue></Reference></SignedInfo><SignatureValue>CqmmtYkJGY939NBYY51ihZysaVUN8ZT9ffgTLTVm1S3f35YQo2ddN70HiHRLdPQkiLIEwr0CCVOku1VEEQuvnS+qEWtlQ3iUzBmnVFxg9BEPP8uNAuSoMDZK5llU2KZk4eUc/0xobK/qwA5Z6ywXYrIgemPp2T/L6QuZGgE8cRc=</SignatureValue><KeyInfo><X509Data><X509Certificate>
 MIICczCCAdygAwIBAgIEAPymiTANBgkqhkiG9w0BAQUFADBrMQswCQYDVQQGEwJV
 UzEQMA4GA1UECBMHTG90aGlhbjESMBAGA1UEBxMJRWRpbmJ1cmdoMQ0wCwYDVQQK
 EwRUZXN0MRgwFgYJKoZIhvcNAQkBFglmcmVkQGhvbWUxDTALBgNVBAMTBGZyZWQw
@@ -99,7 +99,7 @@ exports[`Fiscalization XML should match with partial data 1`] = `
   <soapenv:Body>
     <tns:RacunZahtjev xmlns:tns=\\"http://www.apis-it.hr/fin/2012/types/f73\\" Id=\\"uniqid-0123456789abcdef\\">
       <tns:Zaglavlje>
-        <tns:DatumVrijeme>01.01.2001T01:01:01</tns:DatumVrijeme>
+        <tns:DatumVrijeme>12.01.2021T13:05:30</tns:DatumVrijeme>
         <tns:IdPoruke>uuid-0123456789abcdef</tns:IdPoruke>
       </tns:Zaglavlje>
       <tns:Racun>
@@ -108,7 +108,7 @@ exports[`Fiscalization XML should match with partial data 1`] = `
           <tns:OznNapUr>1</tns:OznNapUr>
           <tns:OznPosPr>ODV1</tns:OznPosPr>
         </tns:BrRac>
-        <tns:DatVrijeme>02.02.2002T02:02:02</tns:DatVrijeme>
+        <tns:DatVrijeme>15.07.2015T20:00:00</tns:DatVrijeme>
         <tns:IznosMarza>32.00</tns:IznosMarza>
         <tns:IznosNePodlOpor>5.10</tns:IznosNePodlOpor>
         <tns:IznosOslobPdv>23.50</tns:IznosOslobPdv>
@@ -123,9 +123,9 @@ exports[`Fiscalization XML should match with partial data 1`] = `
         <tns:Pdv/>
         <tns:Pnp/>
         <tns:USustPdv>false</tns:USustPdv>
-        <tns:ZastKod>935274bbb40a30eab1255d544b4689ce</tns:ZastKod>
+        <tns:ZastKod>c8236f0084baaf67cae8c58df0e1bcd6</tns:ZastKod>
       </tns:Racun>
-    <Signature xmlns=\\"http://www.w3.org/2000/09/xmldsig#\\"><SignedInfo><CanonicalizationMethod Algorithm=\\"http://www.w3.org/2001/10/xml-exc-c14n#\\"/><SignatureMethod Algorithm=\\"http://www.w3.org/2000/09/xmldsig#rsa-sha1\\"/><Reference URI=\\"#uniqid-0123456789abcdef\\"><Transforms><Transform Algorithm=\\"http://www.w3.org/2000/09/xmldsig#enveloped-signature\\"/><Transform Algorithm=\\"http://www.w3.org/2001/10/xml-exc-c14n#\\"/></Transforms><DigestMethod Algorithm=\\"http://www.w3.org/2000/09/xmldsig#sha1\\"/><DigestValue>kkAhzl2XzLD+p3b1+RFy6mDThiY=</DigestValue></Reference></SignedInfo><SignatureValue>PgRLrSm10lUiOICKwveo9bkAUWT97ShHlfapCd/3GnWZjjQfn6eZO7ED/pKez0/V4E9vY9gm2u5I8RjaSqt1zwl2YK91kZdk8sFWkYUco5vZuAi1v2JPqX+fdDH6wIBk8qiJiwaUOB390xwgK/+2mrBMKs2Ta2Iy986Y0MOK96k=</SignatureValue><KeyInfo><X509Data><X509Certificate>
+    <Signature xmlns=\\"http://www.w3.org/2000/09/xmldsig#\\"><SignedInfo><CanonicalizationMethod Algorithm=\\"http://www.w3.org/2001/10/xml-exc-c14n#\\"/><SignatureMethod Algorithm=\\"http://www.w3.org/2000/09/xmldsig#rsa-sha1\\"/><Reference URI=\\"#uniqid-0123456789abcdef\\"><Transforms><Transform Algorithm=\\"http://www.w3.org/2000/09/xmldsig#enveloped-signature\\"/><Transform Algorithm=\\"http://www.w3.org/2001/10/xml-exc-c14n#\\"/></Transforms><DigestMethod Algorithm=\\"http://www.w3.org/2000/09/xmldsig#sha1\\"/><DigestValue>1HzEeDmo4qQWMWkMsFmpY8oJAPw=</DigestValue></Reference></SignedInfo><SignatureValue>gMDMf17+AyJXSi0HYK7WU3IdU2N6pcMebuBI4LyZLcYxIeQP8Bn9XNdp7EWlY30z0Cj2lg7BJ/WJ9cvrZ5GT7XrXnAyUrGtAHKu4itKGZOpliuONT7s4NiA9EG82CU6SMprByxXqmIjzi2wuNSnYFeprMUtrC62hn5OwVpDprWA=</SignatureValue><KeyInfo><X509Data><X509Certificate>
 MIICczCCAdygAwIBAgIEAPymiTANBgkqhkiG9w0BAQUFADBrMQswCQYDVQQGEwJV
 UzEQMA4GA1UECBMHTG90aGlhbjESMBAGA1UEBxMJRWRpbmJ1cmdoMQ0wCwYDVQQK
 EwRUZXN0MRgwFgYJKoZIhvcNAQkBFglmcmVkQGhvbWUxDTALBgNVBAMTBGZyZWQw

@@ -1,14 +1,12 @@
 import builder, { XMLElement } from 'xmlbuilder';
-import dayjs from 'dayjs';
 
-import { DATETIME_FORMAT } from '../constants';
-import { Invoice } from '../types/invoice';
+import { Invoice, XmlInvoiceBody } from '../types';
 import { OrderOfNotes } from '../enums/orderOfNotes';
 import { P12Result } from '../libs/p12pem';
-import { XmlInvoiceBody } from '../types/xmlInvoice';
 import { createSecurityCode } from './securityCode';
 import { makeRefunds } from './refund';
 import { makeTaxRates } from './taxRates';
+import { toDateFormat } from './datetime';
 
 const make = (data: Invoice, certificate: P12Result): XmlInvoiceBody => ({
   BrRac: {
@@ -16,7 +14,7 @@ const make = (data: Invoice, certificate: P12Result): XmlInvoiceBody => ({
     OznNapUr: data.billNumber.paymentDevice,
     OznPosPr: data.billNumber.bussinessUnit,
   },
-  DatVrijeme: dayjs(data.dateTime).format(DATETIME_FORMAT),
+  DatVrijeme: toDateFormat(data.dateTime),
   IznosMarza: data.marginForTaxRate.toFixed(2),
   IznosNePodlOpor: data.taxFree.toFixed(2),
   IznosOslobPdv: data.taxFreeValue.toFixed(2),

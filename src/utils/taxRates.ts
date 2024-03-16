@@ -1,5 +1,4 @@
-import { TaxRate } from '../types/invoice';
-import { XmlTaxRate } from '../types/xmlInvoice';
+import { TaxRate, XmlTaxRate } from '../types';
 
 export const makeTaxRates = (taxes: TaxRate[]): XmlTaxRate[] =>
   taxes.map(({ amount, base, rate, name }) => ({

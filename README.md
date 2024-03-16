@@ -6,8 +6,6 @@ Fiscalization for Croatian invoices.
 
 #### 🔥 Still in development and should not be used in production. Use it on your own risk.
 
-#### 🔑 Currently looking for a collaborator that could provide demo certificate for testing purposes.
-
 ---
 
 ### Usage
@@ -16,15 +14,13 @@ Create new instance of `Fiscalization` class and pass required certificate path 
 
 ```typescript
 import { Fiscalization } from '@ts.fina/fiscalization';
+import { readFileSync } from 'fs';
+
+const certificate = readFileSync('/path-to-certificate/cert.pfx');
 
 const fiscalization = new Fiscalization(
-  './certs/certificate.pfx',
+  certificate,
   CERTIFICATE_PASSWORD,
-  {
-    demo: false,
-    demoUrl: 'https://mycustomdemo.url',
-    productionUrl: 'https://mycustomproduction.url',
-  }
 );
 ```
 
@@ -36,13 +32,6 @@ import { Invoice } from '@ts.fina/fiscalization';
 const myInvoiceData: Invoice = { ... }
 
 const invoiceXml = fiscalization.create(myInvoiceData);
-const response = fiscalization.sendXml(myInvoiceData);
+
+axios.post('{url}', invoiceXml, { headers: { 'Content-Type': 'text/xml' } })
 ```
-
-#### Fiscalization options
-
-| name          | type    | default                                                  | description                   |
-| ------------- | ------- | -------------------------------------------------------- | ----------------------------- |
-| demo          | boolean | false                                                    | Use demo URL                  |
-| demoUrl       | string  | https://cistest.apis-it.hr:8449/FiskalizacijaServiceTest | Provide custom demo URL       |
-| productionUrl | string  | https://cis.porezna-uprava.hr:8449/FiskalizacijaService  | Provide custom production URL |

@@ -1,8 +1,7 @@
-import dayjs from 'dayjs';
 import md5 from 'md5';
 
-import { DATETIME_FORMAT } from '../constants';
-import { Invoice } from '../types/invoice';
+import { Invoice } from '../types';
+import { toDateFormat } from './datetime';
 
 export const createSecurityCode = (
   privateKey: string,
@@ -11,7 +10,7 @@ export const createSecurityCode = (
   const code = [
     privateKey,
     data.oib,
-    dayjs(data.dateTime).format(DATETIME_FORMAT),
+    toDateFormat(data.dateTime),
     data.billNumber.number,
     data.billNumber.bussinessUnit,
     data.billNumber.paymentDevice,

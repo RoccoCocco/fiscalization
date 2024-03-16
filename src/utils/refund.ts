@@ -1,5 +1,4 @@
-import { Refund } from '../types/invoice';
-import { XmlRefund } from '../types/xmlInvoice';
+import { Refund, XmlRefund } from '../types';
 
 export const makeRefunds = (refund: Refund[]): XmlRefund[] =>
   refund.map(({ amount, name }) => ({
