@@ -10,9 +10,9 @@ Fiscalization for Croatian invoices.
 
 ### Usage
 
-Create new instance of `Fiscalization` class and pass required certificate path and password. Options are optional.
+Create new instance of `Fiscalization` class and pass required certificate path and password.
 
-```typescript
+```ts
 import { Fiscalization } from '@ts.fina/fiscalization';
 import { readFileSync } from 'fs';
 
@@ -26,12 +26,12 @@ const fiscalization = new Fiscalization(
 
 Create and send invoice.
 
-```typescript
+```ts
 import { Invoice } from '@ts.fina/fiscalization';
 
-const myInvoiceData: Invoice = { ... }
+const invoice: Invoice = { ... }
 
-const invoiceXml = fiscalization.create(myInvoiceData);
+const xml = fiscalization.create(invoice);
 
-axios.post('{url}', invoiceXml, { headers: { 'Content-Type': 'text/xml' } })
+axios.post(FINA_PRODUCTION_URL, xml, { headers: { 'Content-Type': 'text/xml' } })
 ```
