@@ -1,53 +1,51 @@
-import { FileKeyInfo, SignedXml } from 'xml-crypto';
+import { SignedXml } from 'xml-crypto';
 import xmlBuilder from 'xmlbuilder';
 
 import { P12Result } from '../libs/p12pem';
 
-export const constructX509Signature = (
-  xmlData: string,
-  certificate: P12Result
-): string => {
-  const signature = new SignedXml();
+export class X509SignatureBuilder {
+  private readonly strippedCertificate: string;
 
-  signature.signingKey = certificate.pemKey;
-  signature.keyInfoProvider = new CustomKeyInfoProvider(certificate);
-
-  signature.addReference('.//*[local-name(.)="RacunZahtjev"]', [
-    'http://www.w3.org/2000/09/xmldsig#enveloped-signature',
-    'http://www.w3.org/2001/10/xml-exc-c14n#',
-  ]);
-
-  signature.computeSignature(xmlData, {
-    location: {
-      action: 'append',
-      reference: './/*[local-name(.)="RacunZahtjev"]',
-    },
-  });
-
-  return signature.getSignedXml();
-};
-
-const removeCertificateTags = (certificate: string) =>
-  certificate
-    .replace('-----BEGIN CERTIFICATE-----', '')
-    .replace('-----END CERTIFICATE-----', '');
-
-class CustomKeyInfoProvider implements FileKeyInfo {
-  certificate: P12Result;
-  file: string;
-
-  constructor(certificate: P12Result) {
-    this.certificate = certificate;
-    this.file = '';
+  constructor(private readonly certificate: P12Result) {
+    this.strippedCertificate = certificate.pemCertificate
+      .replace('-----BEGIN CERTIFICATE-----', '')
+      .replace('-----END CERTIFICATE-----', '');
   }
 
-  getKey(): Buffer {
-    return Buffer.from('', 'utf-8');
+  computeSignature(xmlData: string): string {
+    const signedXml = this.create();
+
+    signedXml.computeSignature(xmlData, {
+      location: {
+        action: 'append',
+        reference: './/*[local-name(.)="RacunZahtjev"]',
+      },
+    });
+
+    return signedXml.getSignedXml();
   }
 
-  getKeyInfo(): string {
-    const key = removeCertificateTags(this.certificate.pemCertificate);
+  private create() {
+    const signedXml = new SignedXml({
+      canonicalizationAlgorithm: 'http://www.w3.org/2001/10/xml-exc-c14n#',
+      getKeyInfoContent: () => this.getKeyInfoContent(),
+      privateKey: this.certificate.pemKey,
+      signatureAlgorithm: 'http://www.w3.org/2000/09/xmldsig#rsa-sha1',
+    });
 
+    signedXml.addReference({
+      digestAlgorithm: 'http://www.w3.org/2000/09/xmldsig#sha1',
+      transforms: [
+        'http://www.w3.org/2000/09/xmldsig#enveloped-signature',
+        'http://www.w3.org/2001/10/xml-exc-c14n#',
+      ],
+      xpath: './/*[local-name(.)="RacunZahtjev"]',
+    });
+
+    return signedXml;
+  }
+
+  private getKeyInfoContent(): string {
     const issuer = [
       `OU=${this.certificate.attributes.organizationalUnitName}`,
       `O=${this.certificate.attributes.organizationName}`,
@@ -56,7 +54,7 @@ class CustomKeyInfoProvider implements FileKeyInfo {
 
     const x509 = {
       X509Data: {
-        X509Certificate: key,
+        X509Certificate: this.strippedCertificate,
         X509IssuerSerial: {
           X509IssuerName: issuer,
           X509SerialNumber: this.certificate.serialNumber,

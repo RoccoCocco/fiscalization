@@ -3,7 +3,7 @@ import uniqid from 'uniqid';
 
 import { P12Result, getPemFromP12 } from '../libs/p12pem';
 import {
-  constructX509Signature,
+  X509SignatureBuilder,
   constructXmlInvoiceBody,
   constructXmlInvoiceHeader,
 } from '../utils';
@@ -11,9 +11,11 @@ import { Invoice } from '../types/invoice';
 
 export class Fiscalization {
   private certificate: P12Result;
+  private x509: X509SignatureBuilder;
 
   public constructor(certificate: Buffer, password: string) {
     this.certificate = getPemFromP12(certificate, password);
+    this.x509 = new X509SignatureBuilder(this.certificate);
   }
 
   public create(invoiceData: Invoice): string {
@@ -36,7 +38,7 @@ export class Fiscalization {
     request.importDocument(invoiceBody);
 
     const invoiceXml = root.end({ pretty: true });
-    const signedXml = constructX509Signature(invoiceXml, this.certificate);
+    const signedXml = this.x509.computeSignature(invoiceXml);
 
     return signedXml;
   }
