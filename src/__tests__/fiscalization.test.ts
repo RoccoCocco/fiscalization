@@ -10,7 +10,7 @@ const TEST_CERTIFICATE_PATH = `${__dirname}/../__mocks__/cert.pfx`;
 const TEST_CERTIFICATE_PASS = 'apples';
 const TEST_CERTIFICATE_BUFFER = readFileSync(TEST_CERTIFICATE_PATH);
 
-jest.useFakeTimers('modern');
+jest.useFakeTimers();
 jest.setSystemTime(new Date('2021-01-12T13:05:30.000'));
 
 describe('Fiscalization', () => {

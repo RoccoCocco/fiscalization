@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Fiscalization XML should match with full data 1`] = `
-"<?xml version=\\"1.0\\" encoding=\\"UTF-8\\"?>
-<soapenv:Envelope xmlns:soapenv=\\"http://schemas.xmlsoap.org/soap/envelope/\\">
+"<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
   <soapenv:Body>
-    <tns:RacunZahtjev xmlns:tns=\\"http://www.apis-it.hr/fin/2012/types/f73\\" Id=\\"uniqid-0123456789abcdef\\">
+    <tns:RacunZahtjev xmlns:tns="http://www.apis-it.hr/fin/2012/types/f73" Id="uniqid-0123456789abcdef">
       <tns:Zaglavlje>
         <tns:DatumVrijeme>12.01.2021T13:05:30</tns:DatumVrijeme>
         <tns:IdPoruke>uuid-0123456789abcdef</tns:IdPoruke>
@@ -72,7 +72,7 @@ exports[`Fiscalization XML should match with full data 1`] = `
         <tns:USustPdv>true</tns:USustPdv>
         <tns:ZastKod>23c893f445155cdbc23aafd16ae06662</tns:ZastKod>
       </tns:Racun>
-    <Signature xmlns=\\"http://www.w3.org/2000/09/xmldsig#\\"><SignedInfo><CanonicalizationMethod Algorithm=\\"http://www.w3.org/2001/10/xml-exc-c14n#\\"/><SignatureMethod Algorithm=\\"http://www.w3.org/2000/09/xmldsig#rsa-sha1\\"/><Reference URI=\\"#uniqid-0123456789abcdef\\"><Transforms><Transform Algorithm=\\"http://www.w3.org/2000/09/xmldsig#enveloped-signature\\"/><Transform Algorithm=\\"http://www.w3.org/2001/10/xml-exc-c14n#\\"/></Transforms><DigestMethod Algorithm=\\"http://www.w3.org/2000/09/xmldsig#sha1\\"/><DigestValue>VnqTZ76B8cpF1/uoMUrAA8T3CuA=</DigestValue></Reference></SignedInfo><SignatureValue>CqmmtYkJGY939NBYY51ihZysaVUN8ZT9ffgTLTVm1S3f35YQo2ddN70HiHRLdPQkiLIEwr0CCVOku1VEEQuvnS+qEWtlQ3iUzBmnVFxg9BEPP8uNAuSoMDZK5llU2KZk4eUc/0xobK/qwA5Z6ywXYrIgemPp2T/L6QuZGgE8cRc=</SignatureValue><KeyInfo><X509Data><X509Certificate>
+    <Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/><Reference URI="#uniqid-0123456789abcdef"><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><DigestValue>VnqTZ76B8cpF1/uoMUrAA8T3CuA=</DigestValue></Reference></SignedInfo><SignatureValue>CqmmtYkJGY939NBYY51ihZysaVUN8ZT9ffgTLTVm1S3f35YQo2ddN70HiHRLdPQkiLIEwr0CCVOku1VEEQuvnS+qEWtlQ3iUzBmnVFxg9BEPP8uNAuSoMDZK5llU2KZk4eUc/0xobK/qwA5Z6ywXYrIgemPp2T/L6QuZGgE8cRc=</SignatureValue><KeyInfo><X509Data><X509Certificate>
 MIICczCCAdygAwIBAgIEAPymiTANBgkqhkiG9w0BAQUFADBrMQswCQYDVQQGEwJV
 UzEQMA4GA1UECBMHTG90aGlhbjESMBAGA1UEBxMJRWRpbmJ1cmdoMQ0wCwYDVQQK
 EwRUZXN0MRgwFgYJKoZIhvcNAQkBFglmcmVkQGhvbWUxDTALBgNVBAMTBGZyZWQw
@@ -94,10 +94,10 @@ bHOM8gdmiyHpKCrkkvVR+YJc0x3FuzjuqJP8CkC/WdTJr3YcuLQ6K9QhPO8KIVDs
 `;
 
 exports[`Fiscalization XML should match with partial data 1`] = `
-"<?xml version=\\"1.0\\" encoding=\\"UTF-8\\"?>
-<soapenv:Envelope xmlns:soapenv=\\"http://schemas.xmlsoap.org/soap/envelope/\\">
+"<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
   <soapenv:Body>
-    <tns:RacunZahtjev xmlns:tns=\\"http://www.apis-it.hr/fin/2012/types/f73\\" Id=\\"uniqid-0123456789abcdef\\">
+    <tns:RacunZahtjev xmlns:tns="http://www.apis-it.hr/fin/2012/types/f73" Id="uniqid-0123456789abcdef">
       <tns:Zaglavlje>
         <tns:DatumVrijeme>12.01.2021T13:05:30</tns:DatumVrijeme>
         <tns:IdPoruke>uuid-0123456789abcdef</tns:IdPoruke>
@@ -125,7 +125,7 @@ exports[`Fiscalization XML should match with partial data 1`] = `
         <tns:USustPdv>false</tns:USustPdv>
         <tns:ZastKod>c8236f0084baaf67cae8c58df0e1bcd6</tns:ZastKod>
       </tns:Racun>
-    <Signature xmlns=\\"http://www.w3.org/2000/09/xmldsig#\\"><SignedInfo><CanonicalizationMethod Algorithm=\\"http://www.w3.org/2001/10/xml-exc-c14n#\\"/><SignatureMethod Algorithm=\\"http://www.w3.org/2000/09/xmldsig#rsa-sha1\\"/><Reference URI=\\"#uniqid-0123456789abcdef\\"><Transforms><Transform Algorithm=\\"http://www.w3.org/2000/09/xmldsig#enveloped-signature\\"/><Transform Algorithm=\\"http://www.w3.org/2001/10/xml-exc-c14n#\\"/></Transforms><DigestMethod Algorithm=\\"http://www.w3.org/2000/09/xmldsig#sha1\\"/><DigestValue>1HzEeDmo4qQWMWkMsFmpY8oJAPw=</DigestValue></Reference></SignedInfo><SignatureValue>gMDMf17+AyJXSi0HYK7WU3IdU2N6pcMebuBI4LyZLcYxIeQP8Bn9XNdp7EWlY30z0Cj2lg7BJ/WJ9cvrZ5GT7XrXnAyUrGtAHKu4itKGZOpliuONT7s4NiA9EG82CU6SMprByxXqmIjzi2wuNSnYFeprMUtrC62hn5OwVpDprWA=</SignatureValue><KeyInfo><X509Data><X509Certificate>
+    <Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/><Reference URI="#uniqid-0123456789abcdef"><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><DigestValue>1HzEeDmo4qQWMWkMsFmpY8oJAPw=</DigestValue></Reference></SignedInfo><SignatureValue>gMDMf17+AyJXSi0HYK7WU3IdU2N6pcMebuBI4LyZLcYxIeQP8Bn9XNdp7EWlY30z0Cj2lg7BJ/WJ9cvrZ5GT7XrXnAyUrGtAHKu4itKGZOpliuONT7s4NiA9EG82CU6SMprByxXqmIjzi2wuNSnYFeprMUtrC62hn5OwVpDprWA=</SignatureValue><KeyInfo><X509Data><X509Certificate>
 MIICczCCAdygAwIBAgIEAPymiTANBgkqhkiG9w0BAQUFADBrMQswCQYDVQQGEwJV
 UzEQMA4GA1UECBMHTG90aGlhbjESMBAGA1UEBxMJRWRpbmJ1cmdoMQ0wCwYDVQQK
 EwRUZXN0MRgwFgYJKoZIhvcNAQkBFglmcmVkQGhvbWUxDTALBgNVBAMTBGZyZWQw
