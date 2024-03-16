@@ -1,9 +1,8 @@
 import { TaxRate, XmlTaxRate } from '../types';
 
-export const makeTaxRates = (taxes: TaxRate[]): XmlTaxRate[] =>
-  taxes.map(({ amount, base, rate, name }) => ({
-    ...(name ? { Naziv: name } : {}),
-    Iznos: amount.toFixed(2),
-    Osnovica: base.toFixed(2),
-    Stopa: rate.toFixed(2),
-  }));
+export const makeTaxRate = (data: TaxRate): XmlTaxRate => ({
+  ...(data.name ? { Naziv: data.name } : {}),
+  Iznos: data.amount.toFixed(2),
+  Osnovica: data.base.toFixed(2),
+  Stopa: data.rate.toFixed(2),
+});

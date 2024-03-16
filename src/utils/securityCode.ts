@@ -1,7 +1,7 @@
 import { createHash } from 'crypto';
 
 import { Invoice } from '../types';
-import { toDateFormat } from './datetime';
+import { toDateFormat } from './utils';
 
 export const createSecurityCode = (
   privateKey: string,

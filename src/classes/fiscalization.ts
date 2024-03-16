@@ -4,8 +4,9 @@ import uniqid from 'uniqid';
 import { P12Result, getPemFromP12 } from '../libs/p12pem';
 import {
   X509SignatureBuilder,
-  constructXmlInvoiceBody,
-  constructXmlInvoiceHeader,
+  createBody,
+  createHeader,
+  stringify,
 } from '../utils';
 import { Invoice } from '../types/invoice';
 
@@ -19,9 +20,6 @@ export class Fiscalization {
   }
 
   public create(invoiceData: Invoice): string {
-    const invoiceHeader = constructXmlInvoiceHeader();
-    const invoiceBody = constructXmlInvoiceBody(this.certificate, invoiceData);
-
     const root = builder.create('soapenv:Envelope', { encoding: 'UTF-8' });
 
     root.attribute(
@@ -34,8 +32,16 @@ export class Fiscalization {
     request.attribute('xmlns:tns', 'http://www.apis-it.hr/fin/2012/types/f73');
     request.attribute('Id', uniqid());
 
-    request.importDocument(invoiceHeader);
-    request.importDocument(invoiceBody);
+    const header = builder
+      .create('Zaglavlje', { stringify })
+      .ele(createHeader());
+
+    const body = builder
+      .create('Racun', { stringify })
+      .ele(createBody(invoiceData, this.certificate));
+
+    request.importDocument(header);
+    request.importDocument(body);
 
     const invoiceXml = root.end({ pretty: true });
     const signedXml = this.x509.computeSignature(invoiceXml);

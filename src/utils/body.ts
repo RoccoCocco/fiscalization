@@ -1,14 +1,12 @@
-import builder, { XMLElement } from 'xmlbuilder';
-
 import { Invoice, XmlInvoiceBody } from '../types';
 import { OrderOfNotes } from '../enums/orderOfNotes';
 import { P12Result } from '../libs/p12pem';
 import { createSecurityCode } from './securityCode';
-import { makeRefunds } from './refund';
-import { makeTaxRates } from './taxRates';
-import { toDateFormat } from './datetime';
+import { makeRefund } from './refund';
+import { makeTaxRate } from './taxRates';
+import { toDateFormat } from './utils';
 
-const make = (data: Invoice, certificate: P12Result): XmlInvoiceBody => ({
+export const createBody = (data: Invoice, certificate: P12Result): XmlInvoiceBody => ({
   BrRac: {
     BrOznRac: data.billNumber.number,
     OznNapUr: data.billNumber.paymentDevice,
@@ -21,21 +19,14 @@ const make = (data: Invoice, certificate: P12Result): XmlInvoiceBody => ({
   IznosUkupno: data.totalValue.toFixed(2),
   NacinPlac: data.paymentType,
   NakDost: data.noteOfRedelivary ? 'true' : 'false',
-  Naknade: { Naknada: makeRefunds(data.refund ?? []) },
+  Naknade: { Naknada: data.refund?.map(makeRefund) ?? [] },
   Oib: data.oib,
   OibOper: data.oibOperative,
-  OstaliPor: { Porez: makeTaxRates(data.items.otherTaxRate ?? []) },
+  OstaliPor: { Porez: data.items.otherTaxRate?.map(makeTaxRate) ?? [] },
   OznSlijed: data.noteOfOrder ?? OrderOfNotes.PaymentDevice,
-  Pdv: { Porez: makeTaxRates(data.items.pdv ?? []) },
-  Pnp: { Porez: makeTaxRates(data.items.pnp ?? []) },
+  Pdv: { Porez: data.items.pdv?.map(makeTaxRate) ?? [] },
+  Pnp: { Porez: data.items.pnp?.map(makeTaxRate) ?? [] },
   USustPdv: data.hasPDV ? 'true' : 'false',
   ZastKod: createSecurityCode(certificate.pemKey, data),
 });
 
-const stringify = { name: (val: string) => `tns:${val}` };
-
-export const constructXmlInvoiceBody = (
-  certificate: P12Result,
-  data: Invoice
-): XMLElement =>
-  builder.create('Racun', { stringify }).ele(make(data, certificate));
